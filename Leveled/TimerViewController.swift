@@ -48,12 +48,37 @@ class TimerViewController: UIViewController {
     var timer = NSTimer() //make a timer variable, but do do anything yet
     let timeInterval:NSTimeInterval = 0.1
     let timerEnd:NSTimeInterval = 0.0
-    var timeCount:NSTimeInterval = 10.0
+    var timeCount:NSTimeInterval = 300.0
     //MARK: - Actions
     
     @IBAction func startTimer(sender: UIButton) {
         
         ButtonAudioPLayer.play()
+        
+        let randomColor = colorWheel.randomColor()
+        view.backgroundColor = randomColor
+        startButton.setTitleColor(randomColor, forState: UIControlState.Normal)
+        stopButton.setTitleColor(randomColor, forState: UIControlState.Normal)
+        
+        
+        UIView.animateWithDuration(1.0,
+            delay: 0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.stopButton.alpha = 0
+            }, completion: nil)
+        
+        
+        UIView.animateWithDuration(1.0,
+            delay: 1.0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.startButton.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0, animations: {void in self.startButton.alpha = 0.0})
+        UIView.animateWithDuration(1.0, animations: {void in self.stopButton.alpha = 1.0})
+
         if !timer.valid{ //prevent more than one timer on the thread
             timerLabel.text = timeString(timeCount)
             timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval,
@@ -77,7 +102,8 @@ class TimerViewController: UIViewController {
     @IBAction func resetTimer(sender: UIButton) {
         timer.invalidate()
         resetTimeCount()
-        timerLabel.text = timeString(timeCount)
+        timerLabel.text = "\(timeCount)"
+        print( "yo")
     }
     
     //MARK: - Instance Methods
@@ -94,32 +120,13 @@ class TimerViewController: UIViewController {
     }
     
     func timerDidEnd(timer:NSTimer){
-        //timerLabel.text = timer.userInfo as? String
-        let randomColor = colorWheel.randomColor()
-        view.backgroundColor = randomColor
-        startButton.titleLabel?.textColor = randomColor
-        stopButton.titleLabel?.textColor = randomColor
         
-        
-        UIView.animateWithDuration(1.0,
-            delay: 0,
-            options: UIViewAnimationOptions.CurveLinear,
-            animations: {
-                self.stopButton.alpha = 0
-            }, completion: nil)
-        
-        
-        UIView.animateWithDuration(1.0,
-            delay: 1.0,
-            options: UIViewAnimationOptions.CurveLinear,
-            animations: {
-                self.startButton.alpha = 1.0
-            }, completion: nil)
 
         if countingDown.on{
             //timer that counts down
             timeCount = timeCount - timeInterval
             if timeCount <= 0 {  //test for target time reached.
+                
                 timerLabel.text = "Meditate"
                 timer.invalidate()
             } else { //update the time on the clock if not reached
