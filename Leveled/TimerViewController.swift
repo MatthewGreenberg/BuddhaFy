@@ -46,35 +46,14 @@ class TimerViewController: UIViewController {
     
 
     var timer = NSTimer() //make a timer variable, but do do anything yet
-    let timeInterval:NSTimeInterval = 0.05
-    let timerEnd:NSTimeInterval = 10.0
-    var timeCount:NSTimeInterval = 0.0
+    let timeInterval:NSTimeInterval = 0.1
+    let timerEnd:NSTimeInterval = 0.0
+    var timeCount:NSTimeInterval = 10.0
     //MARK: - Actions
     
     @IBAction func startTimer(sender: UIButton) {
         
         ButtonAudioPLayer.play()
-        //change color
-        let randomColor = colorWheel.randomColor()
-        view.backgroundColor = randomColor
-        startButton.titleLabel?.textColor = randomColor
-        stopButton.titleLabel?.textColor = randomColor
-        
-        UIView.animateWithDuration(1.0,
-            delay: 0,
-            options: UIViewAnimationOptions.CurveLinear,
-            animations: {
-                self.startButton.alpha = 0
-            }, completion: nil)
-        UIView.animateWithDuration(0.5,
-            delay: 1.0,
-            options: UIViewAnimationOptions.CurveLinear,
-            animations: {
-                self.stopButton.alpha = 1.0
-            }, completion: nil)
-
-
-        
         if !timer.valid{ //prevent more than one timer on the thread
             timerLabel.text = timeString(timeCount)
             timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval,
@@ -104,17 +83,14 @@ class TimerViewController: UIViewController {
     //MARK: - Instance Methods
     func resetTimeCount(){
         if countingDown.on{
-            timeCount = timerEnd
-        } else {
-            timeCount = 0.0
+            timeCount = timeCount + 0
         }
     }
     
     func timeString(time:NSTimeInterval) -> String {
         let minutes = Int(time) / 60
         let seconds = Int(time) % 60
-        let secondFraction = Int((time - Double(seconds)) * 10.0)
-        return String(format:"%02i:%02i.%01i",minutes,seconds,secondFraction)
+        return String(format:"%02i:%02i",minutes,seconds)
     }
     
     func timerDidEnd(timer:NSTimer){
@@ -144,7 +120,7 @@ class TimerViewController: UIViewController {
             //timer that counts down
             timeCount = timeCount - timeInterval
             if timeCount <= 0 {  //test for target time reached.
-                timerLabel.text = "Pizza Ready!!"
+                timerLabel.text = "Meditate"
                 timer.invalidate()
             } else { //update the time on the clock if not reached
                 timerLabel.text = timeString(timeCount)
