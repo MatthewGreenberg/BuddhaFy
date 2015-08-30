@@ -1,25 +1,165 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hpi-OI-whJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Leveled" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dN-gw-W1g">
+                                <rect key="frame" x="125" y="131" width="72" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Meditate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="m8s-TX-O6b" kind="modal" id="kNU-RJ-dX2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="9qy-yL-CcT">
+                                <rect key="frame" x="41" y="278" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9tT-LH-iF4" appends="YES" id="dPo-qh-Dw0"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ceA-Yw-KDi" appends="YES" id="ARU-Ji-DvT"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="fGQ-ki-SJ6"/>
+                    <connections>
+                        <outlet property="buddah" destination="9qy-yL-CcT" id="GGn-8c-ebj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="9tT-LH-iF4">
+                    <connections>
+                        <action selector="Rotate:" destination="BYZ-38-t0r" id="8dF-Ss-DTk"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <rotationGestureRecognizer id="ceA-Yw-KDi">
+                    <connections>
+                        <action selector="rotate:" destination="BYZ-38-t0r" id="vdR-Qf-7Eo"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="8XW-b5-QLa">
+                    <connections>
+                        <action selector="rotateback:" destination="BYZ-38-t0r" id="1Ir-lM-JVx"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="694" y="366"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="EBF-TU-jWf">
+            <objects>
+                <viewController id="m8s-TX-O6b" customClass="TimerViewController" customModule="Leveled" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hbt-DK-7p7"/>
+                        <viewControllerLayoutGuide type="bottom" id="2gx-i6-pJf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iEV-N1-Y6m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVs-La-Svz">
+                                <rect key="frame" x="128" y="108" width="65" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="twh-hC-EqK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzh-6e-clh">
+                                <rect key="frame" x="100" y="432" width="120" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTimer" destination="m8s-TX-O6b" eventType="touchUpInside" id="fOo-o7-cWs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9T-me-E8w">
+                                <rect key="frame" x="100" y="432" width="120" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="665-xb-1aR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimer" destination="m8s-TX-O6b" eventType="touchUpInside" id="V2d-TE-9jK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="y9T-me-E8w" firstAttribute="leading" secondItem="iEV-N1-Y6m" secondAttribute="leadingMargin" constant="84" id="7BC-bO-PD5"/>
+                            <constraint firstItem="Qzh-6e-clh" firstAttribute="baseline" secondItem="y9T-me-E8w" secondAttribute="firstBaseline" id="902-EG-7i5"/>
+                            <constraint firstItem="y9T-me-E8w" firstAttribute="baseline" secondItem="Qzh-6e-clh" secondAttribute="firstBaseline" id="J4V-Ot-bLH"/>
+                            <constraint firstItem="y9T-me-E8w" firstAttribute="trailing" secondItem="Qzh-6e-clh" secondAttribute="trailing" id="MUP-ia-2oj"/>
+                            <constraint firstItem="HVs-La-Svz" firstAttribute="top" secondItem="hbt-DK-7p7" secondAttribute="bottom" constant="88" id="cDf-q0-vtD"/>
+                            <constraint firstItem="Qzh-6e-clh" firstAttribute="leading" secondItem="y9T-me-E8w" secondAttribute="leading" id="dRb-Af-tjb"/>
+                            <constraint firstItem="HVs-La-Svz" firstAttribute="centerX" secondItem="y9T-me-E8w" secondAttribute="centerX" id="g1g-5U-px0"/>
+                            <constraint firstItem="2gx-i6-pJf" firstAttribute="top" secondItem="Qzh-6e-clh" secondAttribute="bottom" constant="86" id="jr3-GG-3NO"/>
+                            <constraint firstItem="HVs-La-Svz" firstAttribute="centerX" secondItem="iEV-N1-Y6m" secondAttribute="centerX" id="ppR-vP-kWe"/>
+                            <constraint firstItem="Qzh-6e-clh" firstAttribute="top" secondItem="y9T-me-E8w" secondAttribute="top" id="wJF-un-AMU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="kdP-7v-1dr"/>
+                    <connections>
+                        <outlet property="counterTime" destination="HVs-La-Svz" id="LZh-Do-22t"/>
+                        <outlet property="startButton" destination="y9T-me-E8w" id="di8-d0-4cA"/>
+                        <outlet property="stopButton" destination="Qzh-6e-clh" id="Xx7-wz-lEZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vwg-Lc-4y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163" y="366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZMM-oo-GLv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hpi-OI-whJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EnH-Gi-3Rf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gct-Wq-3Sh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eN5-sv-TVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="283" height="400"/>
+    </resources>
 </document>
