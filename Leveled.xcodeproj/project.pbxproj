@@ -14,28 +14,8 @@
 		6B9C26021B925D1F00C07485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C26001B925D1F00C07485 /* Main.storyboard */; };
 		6B9C26041B925D1F00C07485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C26031B925D1F00C07485 /* Assets.xcassets */; };
 		6B9C26071B925D1F00C07485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C26051B925D1F00C07485 /* LaunchScreen.storyboard */; };
-		6B9C26121B925D1F00C07485 /* LeveledTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C26111B925D1F00C07485 /* LeveledTests.swift */; };
-		6B9C261D1B925D1F00C07485 /* LeveledUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C261C1B925D1F00C07485 /* LeveledUITests.swift */; };
-		6B9C262B1B925E7400C07485 /* colorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C262A1B925E7400C07485 /* colorWheel.swift */; settings = {ASSET_TAGS = (); }; };
 		6B9C262D1B92622300C07485 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C262C1B92622300C07485 /* TimerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6B9C260E1B925D1F00C07485 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B9C25F11B925D1F00C07485 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6B9C25F81B925D1F00C07485;
-			remoteInfo = Leveled;
-		};
-		6B9C26191B925D1F00C07485 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B9C25F11B925D1F00C07485 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6B9C25F81B925D1F00C07485;
-			remoteInfo = Leveled;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6B155AF01B92A6730031151E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -47,13 +27,6 @@
 		6B9C26031B925D1F00C07485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B9C26061B925D1F00C07485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B9C26081B925D1F00C07485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B9C260D1B925D1F00C07485 /* LeveledTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeveledTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B9C26111B925D1F00C07485 /* LeveledTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveledTests.swift; sourceTree = "<group>"; };
-		6B9C26131B925D1F00C07485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B9C26181B925D1F00C07485 /* LeveledUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeveledUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B9C261C1B925D1F00C07485 /* LeveledUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveledUITests.swift; sourceTree = "<group>"; };
-		6B9C261E1B925D1F00C07485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B9C262A1B925E7400C07485 /* colorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = colorWheel.swift; path = "../../../leveled-beta/colorWheel.swift"; sourceTree = "<group>"; };
 		6B9C262C1B92622300C07485 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,20 +39,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B9C260A1B925D1F00C07485 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6B9C26151B925D1F00C07485 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,8 +47,6 @@
 			children = (
 				6B155AF01B92A6730031151E /* AVFoundation.framework */,
 				6B9C25FB1B925D1F00C07485 /* Leveled */,
-				6B9C26101B925D1F00C07485 /* LeveledTests */,
-				6B9C261B1B925D1F00C07485 /* LeveledUITests */,
 				6B9C25FA1B925D1F00C07485 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,8 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				6B9C25F91B925D1F00C07485 /* Leveled.app */,
-				6B9C260D1B925D1F00C07485 /* LeveledTests.xctest */,
-				6B9C26181B925D1F00C07485 /* LeveledUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				6B155AF21B92A8F60031151E /* buddha.mp3 */,
-				6B9C262A1B925E7400C07485 /* colorWheel.swift */,
 				6B9C25FC1B925D1F00C07485 /* AppDelegate.swift */,
 				6B9C25FE1B925D1F00C07485 /* ViewController.swift */,
 				6B9C26001B925D1F00C07485 /* Main.storyboard */,
@@ -118,24 +72,6 @@
 				6B9C262C1B92622300C07485 /* TimerViewController.swift */,
 			);
 			path = Leveled;
-			sourceTree = "<group>";
-		};
-		6B9C26101B925D1F00C07485 /* LeveledTests */ = {
-			isa = PBXGroup;
-			children = (
-				6B9C26111B925D1F00C07485 /* LeveledTests.swift */,
-				6B9C26131B925D1F00C07485 /* Info.plist */,
-			);
-			path = LeveledTests;
-			sourceTree = "<group>";
-		};
-		6B9C261B1B925D1F00C07485 /* LeveledUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6B9C261C1B925D1F00C07485 /* LeveledUITests.swift */,
-				6B9C261E1B925D1F00C07485 /* Info.plist */,
-			);
-			path = LeveledUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,42 +94,6 @@
 			productReference = 6B9C25F91B925D1F00C07485 /* Leveled.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6B9C260C1B925D1F00C07485 /* LeveledTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6B9C26241B925D1F00C07485 /* Build configuration list for PBXNativeTarget "LeveledTests" */;
-			buildPhases = (
-				6B9C26091B925D1F00C07485 /* Sources */,
-				6B9C260A1B925D1F00C07485 /* Frameworks */,
-				6B9C260B1B925D1F00C07485 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6B9C260F1B925D1F00C07485 /* PBXTargetDependency */,
-			);
-			name = LeveledTests;
-			productName = LeveledTests;
-			productReference = 6B9C260D1B925D1F00C07485 /* LeveledTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6B9C26171B925D1F00C07485 /* LeveledUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6B9C26271B925D1F00C07485 /* Build configuration list for PBXNativeTarget "LeveledUITests" */;
-			buildPhases = (
-				6B9C26141B925D1F00C07485 /* Sources */,
-				6B9C26151B925D1F00C07485 /* Frameworks */,
-				6B9C26161B925D1F00C07485 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6B9C261A1B925D1F00C07485 /* PBXTargetDependency */,
-			);
-			name = LeveledUITests;
-			productName = LeveledUITests;
-			productReference = 6B9C26181B925D1F00C07485 /* LeveledUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,14 +105,6 @@
 				TargetAttributes = {
 					6B9C25F81B925D1F00C07485 = {
 						CreatedOnToolsVersion = 7.0;
-					};
-					6B9C260C1B925D1F00C07485 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 6B9C25F81B925D1F00C07485;
-					};
-					6B9C26171B925D1F00C07485 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 6B9C25F81B925D1F00C07485;
 					};
 				};
 			};
@@ -230,8 +122,6 @@
 			projectRoot = "";
 			targets = (
 				6B9C25F81B925D1F00C07485 /* Leveled */,
-				6B9C260C1B925D1F00C07485 /* LeveledTests */,
-				6B9C26171B925D1F00C07485 /* LeveledUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,20 +138,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B9C260B1B925D1F00C07485 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6B9C26161B925D1F00C07485 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -270,42 +146,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9C262D1B92622300C07485 /* TimerViewController.swift in Sources */,
-				6B9C262B1B925E7400C07485 /* colorWheel.swift in Sources */,
 				6B9C25FF1B925D1F00C07485 /* ViewController.swift in Sources */,
 				6B9C25FD1B925D1F00C07485 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B9C26091B925D1F00C07485 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6B9C26121B925D1F00C07485 /* LeveledTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6B9C26141B925D1F00C07485 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6B9C261D1B925D1F00C07485 /* LeveledUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6B9C260F1B925D1F00C07485 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6B9C25F81B925D1F00C07485 /* Leveled */;
-			targetProxy = 6B9C260E1B925D1F00C07485 /* PBXContainerItemProxy */;
-		};
-		6B9C261A1B925D1F00C07485 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6B9C25F81B925D1F00C07485 /* Leveled */;
-			targetProxy = 6B9C26191B925D1F00C07485 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6B9C26001B925D1F00C07485 /* Main.storyboard */ = {
@@ -432,54 +278,6 @@
 			};
 			name = Release;
 		};
-		6B9C26251B925D1F00C07485 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = LeveledTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mcgreenb.umich.edu.LeveledTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leveled.app/Leveled";
-			};
-			name = Debug;
-		};
-		6B9C26261B925D1F00C07485 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = LeveledTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mcgreenb.umich.edu.LeveledTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leveled.app/Leveled";
-			};
-			name = Release;
-		};
-		6B9C26281B925D1F00C07485 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = LeveledUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mcgreenb.umich.edu.LeveledUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Leveled;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		6B9C26291B925D1F00C07485 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = LeveledUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mcgreenb.umich.edu.LeveledUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Leveled;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -497,24 +295,6 @@
 			buildConfigurations = (
 				6B9C26221B925D1F00C07485 /* Debug */,
 				6B9C26231B925D1F00C07485 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6B9C26241B925D1F00C07485 /* Build configuration list for PBXNativeTarget "LeveledTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B9C26251B925D1F00C07485 /* Debug */,
-				6B9C26261B925D1F00C07485 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6B9C26271B925D1F00C07485 /* Build configuration list for PBXNativeTarget "LeveledUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B9C26281B925D1F00C07485 /* Debug */,
-				6B9C26291B925D1F00C07485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

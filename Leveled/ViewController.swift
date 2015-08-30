@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     var location = CGPoint(x: 0, y: 0)
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch: UITouch! = touches.first as UITouch!
+        _ = touches.first as UITouch!
         
 
         
