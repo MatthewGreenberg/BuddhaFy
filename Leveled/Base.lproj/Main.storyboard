@@ -88,7 +88,7 @@
                                 <rect key="frame" x="100" y="384" width="120" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="665-xb-1aR"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZKi-TZ-0Du"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                 <state key="normal" title="Start">
@@ -98,22 +98,22 @@
                                     <action selector="startTimer:" destination="m8s-TX-O6b" eventType="touchUpInside" id="TxX-H7-ek9"/>
                                 </connections>
                             </button>
-                            <switch hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-RS-738">
+                            <switch hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-RS-738">
                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVs-La-Svz">
-                                <rect key="frame" x="127.5" y="108" width="65" height="25"/>
+                                <rect key="frame" x="104" y="108" width="113" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="twh-hC-EqK"/>
+                                    <constraint firstAttribute="height" constant="54" id="SEI-Pm-KMQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="45"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1K-6K-nRH">
                                 <rect key="frame" x="135" y="491" width="51" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="d7q-Kp-xQV"/>
+                                    <constraint firstAttribute="width" constant="51" id="Cod-8U-sZo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <state key="normal" title="Pause">
@@ -123,26 +123,41 @@
                                     <action selector="resetTimer:" destination="m8s-TX-O6b" eventType="touchUpInside" id="Qt6-lD-3O9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCk-gh-Xdr">
+                                <rect key="frame" x="135" y="491" width="57" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Resume">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resume" destination="m8s-TX-O6b" eventType="touchUpInside" id="ogw-xU-WgU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="y9T-me-E8w" firstAttribute="leading" secondItem="iEV-N1-Y6m" secondAttribute="leadingMargin" constant="84" id="7BC-bO-PD5"/>
-                            <constraint firstItem="Qzh-6e-clh" firstAttribute="baseline" secondItem="y9T-me-E8w" secondAttribute="firstBaseline" id="902-EG-7i5"/>
-                            <constraint firstItem="2gx-i6-pJf" firstAttribute="top" secondItem="R1K-6K-nRH" secondAttribute="bottom" constant="46" id="GDE-UF-lWl"/>
-                            <constraint firstItem="y9T-me-E8w" firstAttribute="baseline" secondItem="Qzh-6e-clh" secondAttribute="firstBaseline" id="J4V-Ot-bLH"/>
-                            <constraint firstItem="y9T-me-E8w" firstAttribute="trailing" secondItem="Qzh-6e-clh" secondAttribute="trailing" id="MUP-ia-2oj"/>
-                            <constraint firstItem="R1K-6K-nRH" firstAttribute="top" secondItem="Qzh-6e-clh" secondAttribute="bottom" constant="57" id="R40-Oh-nVE"/>
-                            <constraint firstItem="HVs-La-Svz" firstAttribute="top" secondItem="hbt-DK-7p7" secondAttribute="bottom" constant="88" id="cDf-q0-vtD"/>
-                            <constraint firstItem="Qzh-6e-clh" firstAttribute="leading" secondItem="y9T-me-E8w" secondAttribute="leading" id="dRb-Af-tjb"/>
-                            <constraint firstItem="HVs-La-Svz" firstAttribute="centerX" secondItem="y9T-me-E8w" secondAttribute="centerX" id="g1g-5U-px0"/>
-                            <constraint firstItem="2gx-i6-pJf" firstAttribute="top" secondItem="Qzh-6e-clh" secondAttribute="bottom" constant="86" id="jr3-GG-3NO"/>
-                            <constraint firstItem="R1K-6K-nRH" firstAttribute="centerX" secondItem="HVs-La-Svz" secondAttribute="centerX" id="msT-2h-ZGK"/>
-                            <constraint firstItem="HVs-La-Svz" firstAttribute="centerX" secondItem="iEV-N1-Y6m" secondAttribute="centerX" id="ppR-vP-kWe"/>
-                            <constraint firstItem="Qzh-6e-clh" firstAttribute="top" secondItem="y9T-me-E8w" secondAttribute="top" id="wJF-un-AMU"/>
+                            <constraint firstItem="tCk-gh-Xdr" firstAttribute="baseline" secondItem="R1K-6K-nRH" secondAttribute="baseline" id="0EE-XZ-lMO"/>
+                            <constraint firstItem="HVs-La-Svz" firstAttribute="top" secondItem="hbt-DK-7p7" secondAttribute="bottom" constant="88" id="17c-yu-7zd"/>
+                            <constraint firstItem="Z32-RS-738" firstAttribute="leading" secondItem="iEV-N1-Y6m" secondAttribute="leading" id="1kl-OB-0JM"/>
+                            <constraint firstItem="Z32-RS-738" firstAttribute="top" secondItem="iEV-N1-Y6m" secondAttribute="top" id="2Aj-z1-jJH"/>
+                            <constraint firstItem="y9T-me-E8w" firstAttribute="top" secondItem="Qzh-6e-clh" secondAttribute="top" id="2Ks-iW-nsC"/>
+                            <constraint firstItem="y9T-me-E8w" firstAttribute="leading" secondItem="iEV-N1-Y6m" secondAttribute="leadingMargin" constant="84" id="BRI-6C-Aq1"/>
+                            <constraint firstItem="R1K-6K-nRH" firstAttribute="centerX" secondItem="Qzh-6e-clh" secondAttribute="centerX" id="HYC-TM-Wqr"/>
+                            <constraint firstItem="2gx-i6-pJf" firstAttribute="top" secondItem="R1K-6K-nRH" secondAttribute="bottom" constant="46" id="Rqd-bN-9f9"/>
+                            <constraint firstItem="Qzh-6e-clh" firstAttribute="centerX" secondItem="HVs-La-Svz" secondAttribute="centerX" id="TR8-1X-13B"/>
+                            <constraint firstItem="y9T-me-E8w" firstAttribute="centerX" secondItem="iEV-N1-Y6m" secondAttribute="centerX" id="V2X-J1-06t"/>
+                            <constraint firstItem="y9T-me-E8w" firstAttribute="baseline" secondItem="Qzh-6e-clh" secondAttribute="firstBaseline" id="YeV-kJ-78w"/>
+                            <constraint firstItem="Qzh-6e-clh" firstAttribute="baseline" secondItem="y9T-me-E8w" secondAttribute="firstBaseline" id="eMx-qf-unl"/>
+                            <constraint firstItem="R1K-6K-nRH" firstAttribute="top" secondItem="y9T-me-E8w" secondAttribute="bottom" constant="57" id="jPF-Dq-ab8"/>
+                            <constraint firstItem="R1K-6K-nRH" firstAttribute="leading" secondItem="tCk-gh-Xdr" secondAttribute="leading" id="qoL-fq-rzl"/>
+                            <constraint firstItem="y9T-me-E8w" firstAttribute="trailing" secondItem="Qzh-6e-clh" secondAttribute="trailing" id="uWk-Ex-HUG"/>
+                            <constraint firstItem="y9T-me-E8w" firstAttribute="leading" secondItem="Qzh-6e-clh" secondAttribute="leading" id="zFy-vh-RGa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="kdP-7v-1dr"/>
                     <connections>
+                        <outlet property="Pause" destination="R1K-6K-nRH" id="hoQ-13-Cix"/>
+                        <outlet property="Resume" destination="tCk-gh-Xdr" id="1tR-8g-2gY"/>
                         <outlet property="countingDown" destination="Z32-RS-738" id="Wxv-Zp-Jja"/>
                         <outlet property="startButton" destination="y9T-me-E8w" id="jBd-tX-byc"/>
                         <outlet property="stopButton" destination="Qzh-6e-clh" id="ehr-eP-xmI"/>

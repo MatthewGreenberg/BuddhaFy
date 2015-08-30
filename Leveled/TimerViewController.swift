@@ -26,6 +26,10 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     
+    @IBOutlet weak var Pause: UIButton!
+    
+    @IBOutlet weak var Resume: UIButton!
+    
     var ButtonAudioPLayer = AVAudioPlayer()
     
     override func viewDidLoad() {
@@ -33,6 +37,7 @@ class TimerViewController: UIViewController {
         try! ButtonAudioPLayer = AVAudioPlayer(contentsOfURL: ButtonAudioUrl)
         self.startButton.alpha = 0
         self.stopButton.alpha = 0
+        self.Resume.alpha = 0
         
     }
 
@@ -100,10 +105,24 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func resetTimer(sender: UIButton) {
+        
+        UIView.animateWithDuration(1.0,
+            delay: 0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.Pause.alpha = 0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0,
+            delay: 1.0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.Resume.alpha = 1.0
+            }, completion: nil)
+
         timer.invalidate()
         resetTimeCount()
-        timerLabel.text = "\(timeCount)"
-        print( "yo")
+        timerLabel.text = timeString(timeCount)
     }
     
     //MARK: - Instance Methods
@@ -127,7 +146,7 @@ class TimerViewController: UIViewController {
             timeCount = timeCount - timeInterval
             if timeCount <= 0 {  //test for target time reached.
                 
-                timerLabel.text = "Meditate"
+                
                 timer.invalidate()
             } else { //update the time on the clock if not reached
                 timerLabel.text = timeString(timeCount)
@@ -146,6 +165,66 @@ class TimerViewController: UIViewController {
         }
         
     }
+    
+    
+    @IBAction func resume() {
+        
+        
+        
+        UIView.animateWithDuration(1.0,
+            delay: 0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.Resume.alpha = 0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0,
+            delay: 1.0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.Pause.alpha = 1.0
+            }, completion: nil)
+
+        
+        let randomColor = colorWheel.randomColor()
+        view.backgroundColor = randomColor
+        startButton.setTitleColor(randomColor, forState: UIControlState.Normal)
+        stopButton.setTitleColor(randomColor, forState: UIControlState.Normal)
+        
+        
+        UIView.animateWithDuration(1.0,
+            delay: 0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.stopButton.alpha = 0
+            }, completion: nil)
+        
+        
+        UIView.animateWithDuration(1.0,
+            delay: 1.0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.startButton.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0, animations: {void in self.startButton.alpha = 0.0})
+        UIView.animateWithDuration(1.0, animations: {void in self.stopButton.alpha = 1.0})
+        
+        if !timer.valid{ //prevent more than one timer on the thread
+            timerLabel.text = timeString(timeCount)
+            timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval,
+                target: self,
+                selector: "timerDidEnd:",
+                userInfo: "Meditation Complete",
+                repeats: true) //repeating timer in the second iteration
+        }
+
+        
+    }
+    
+    
+    
+    
     
 }
 
