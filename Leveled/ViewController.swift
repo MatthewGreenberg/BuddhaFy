@@ -19,8 +19,6 @@ class ViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         _ = touches.first as UITouch!
         
-
-        
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -37,13 +35,7 @@ class ViewController: UIViewController {
         UIView.animateWithDuration(1.0, animations: {
             self.buddah.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
         })
-
-    
     }
-    
-
-    
-
     
     
     override func viewDidLoad() {
