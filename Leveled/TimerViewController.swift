@@ -13,7 +13,7 @@ import AVFoundation
 class TimerViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
-    let colorWheel = ColorWheel()
+//    let colorWheel = ColorWheel()
     
     //the time now
     var startTime = NSTimeInterval()
@@ -84,7 +84,7 @@ class TimerViewController: UIViewController {
         
         //find out the fraction of milliseconds to be displayed.
         
-        let fraction = UInt8(elapsedTime * 100)
+        _ = UInt8(elapsedTime * 100)
         
         //add the leading zero for minutes, seconds and millseconds and store them as string constants
         
@@ -106,10 +106,10 @@ class TimerViewController: UIViewController {
         
         
         //change color
-        let randomColor = colorWheel.randomColor()
-        view.backgroundColor = randomColor
-        startButton.titleLabel?.textColor = randomColor
-        stopButton.titleLabel?.textColor = randomColor
+//        let randomColor = colorWheel.randomColor()
+//        view.backgroundColor = randomColor
+//        startButton.titleLabel?.textColor = randomColor
+//        stopButton.titleLabel?.textColor = randomColor
         
         if !timer.valid {
         let aSelector : Selector = "updateTime"
@@ -147,10 +147,10 @@ class TimerViewController: UIViewController {
     //stop timer
     @IBAction func stopTimer() {
         
-        let randomColor = colorWheel.randomColor()
-        view.backgroundColor = randomColor
-        startButton.titleLabel?.textColor = randomColor
-        stopButton.titleLabel?.textColor = randomColor
+//        let randomColor = colorWheel.randomColor()
+//        view.backgroundColor = randomColor
+//        startButton.titleLabel?.textColor = randomColor
+//        stopButton.titleLabel?.textColor = randomColor
         
         timer.invalidate()
         counterTime.text = "00.00"
