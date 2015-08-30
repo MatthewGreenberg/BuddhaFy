@@ -80,28 +80,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVs-La-Svz">
-                                <rect key="frame" x="128" y="108" width="65" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="twh-hC-EqK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzh-6e-clh">
-                                <rect key="frame" x="100" y="432" width="120" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzh-6e-clh">
+                                <rect key="frame" x="90" y="384" width="120" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="stopTimer" destination="m8s-TX-O6b" eventType="touchUpInside" id="fOo-o7-cWs"/>
+                                    <action selector="stopTimer:" destination="m8s-TX-O6b" eventType="touchUpInside" id="Bn1-rU-E0r"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9T-me-E8w">
-                                <rect key="frame" x="100" y="432" width="120" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9T-me-E8w">
+                                <rect key="frame" x="90" y="314" width="120" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="665-xb-1aR"/>
@@ -111,9 +102,43 @@
                                     <color key="titleColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="startTimer" destination="m8s-TX-O6b" eventType="touchUpInside" id="V2d-TE-9jK"/>
+                                    <action selector="startTimer:" destination="m8s-TX-O6b" eventType="touchUpInside" id="TxX-H7-ek9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1K-6K-nRH">
+                                <rect key="frame" x="115" y="467" width="40" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTimer:" destination="m8s-TX-O6b" eventType="touchUpInside" id="F4l-nb-3qY"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-RS-738">
+                                <rect key="frame" x="126" y="183" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3g-ca-dq3">
+                                <rect key="frame" x="82" y="188" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Down" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQq-Sg-pEl">
+                                <rect key="frame" x="198" y="188" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVs-La-Svz">
+                                <rect key="frame" x="109" y="90" width="102" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="twh-hC-EqK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -131,14 +156,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="kdP-7v-1dr"/>
                     <connections>
-                        <outlet property="counterTime" destination="HVs-La-Svz" id="LZh-Do-22t"/>
-                        <outlet property="startButton" destination="y9T-me-E8w" id="di8-d0-4cA"/>
-                        <outlet property="stopButton" destination="Qzh-6e-clh" id="Xx7-wz-lEZ"/>
+                        <outlet property="countingDown" destination="Z32-RS-738" id="Wxv-Zp-Jja"/>
+                        <outlet property="startButton" destination="y9T-me-E8w" id="jBd-tX-byc"/>
+                        <outlet property="stopButton" destination="Qzh-6e-clh" id="ehr-eP-xmI"/>
+                        <outlet property="timerLabel" destination="HVs-La-Svz" id="7iI-kv-3X7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vwg-Lc-4y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1163" y="366"/>
+            <point key="canvasLocation" x="1067" y="366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZMM-oo-GLv">

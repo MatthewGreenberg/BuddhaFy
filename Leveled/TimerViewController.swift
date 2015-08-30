@@ -1,124 +1,65 @@
 //
-//  TimerViewController.swift
-//  Leveled
+//  ViewController.swift
+//  SwiftPizzaTimer
 //
-//  Created by Matthew on 8/29/15.
-//  Copyright © 2015 Matthew. All rights reserved.
+//  Created by Steven Lipton on 4/22/15.
+//  Copyright (c) 2015 MakeAppPie.Com. All rights reserved.
+//
+//  Iteration 1 of the timer - a single time
 //
 
 import UIKit
 import AVFoundation
 
-
 class TimerViewController: UIViewController {
+    //iteration 2 of the timer
     
+    //MARK: - Outlets and properties
+    
+    //color and sound 
     var audioPlayer = AVAudioPlayer()
-//    let colorWheel = ColorWheel()
-    
-    //the time now
-    var startTime = NSTimeInterval()
-    
-    //actual timer
-    var timer = NSTimer()
-    
-    
-    
-
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var stopButton: UIButton!
-    @IBOutlet weak var counterTime: UILabel!
-    
-    
+    let colorWheel = ColorWheel()
     var ButtonAudioUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buddha", ofType: "mp3")!)
     
-   var ButtonAudioPLayer = AVAudioPlayer()
+    @IBOutlet weak var countingDown: UISwitch!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    var ButtonAudioPLayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       try! ButtonAudioPLayer = AVAudioPlayer(contentsOfURL: ButtonAudioUrl)
+        try! ButtonAudioPLayer = AVAudioPlayer(contentsOfURL: ButtonAudioUrl)
         self.startButton.alpha = 0
         self.stopButton.alpha = 0
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
 
-    
-    //Start Button Fades In
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         UIView.animateWithDuration(1.0, animations: {void in self.startButton.alpha = 1.0})
         
     }
+
     
-    
-    
-    //func that determines the timer moving
-  
     
 
-    func updateTime() {
-        
-        let currentTime = NSDate.timeIntervalSinceReferenceDate()
-        
-        //Find the difference between current time and start time.
-        
-        var elapsedTime: NSTimeInterval = currentTime - startTime
-        
-        //calculate the minutes in elapsed time.
-        
-        let minutes = UInt8(elapsedTime / 60.0)
-        
-        elapsedTime -= (NSTimeInterval(minutes) * 60)
-        
-        //calculate the seconds in elapsed time.
-        
-        let seconds = UInt8(elapsedTime)
-        
-        elapsedTime -= NSTimeInterval(seconds)
-        
-        //find out the fraction of milliseconds to be displayed.
-        
-        _ = UInt8(elapsedTime * 100)
-        
-        //add the leading zero for minutes, seconds and millseconds and store them as string constants
-        
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        
-        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
-        
-        counterTime.text = "\(strMinutes):\(strSeconds)"
-    }
+    var timer = NSTimer() //make a timer variable, but do do anything yet
+    let timeInterval:NSTimeInterval = 0.05
+    let timerEnd:NSTimeInterval = 10.0
+    var timeCount:NSTimeInterval = 0.0
+    //MARK: - Actions
     
-    
-    
-    
-    
-    //starts timer
-    
-    @IBAction func startTimer() {
+    @IBAction func startTimer(sender: UIButton) {
         
-        
+        ButtonAudioPLayer.play()
         //change color
-//        let randomColor = colorWheel.randomColor()
-//        view.backgroundColor = randomColor
-//        startButton.titleLabel?.textColor = randomColor
-//        stopButton.titleLabel?.textColor = randomColor
+        let randomColor = colorWheel.randomColor()
+        view.backgroundColor = randomColor
+        startButton.titleLabel?.textColor = randomColor
+        stopButton.titleLabel?.textColor = randomColor
         
-        if !timer.valid {
-        let aSelector : Selector = "updateTime"
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        startTime = NSDate.timeIntervalSinceReferenceDate()
-        }
-        
-        
-        //animate button
         UIView.animateWithDuration(1.0,
             delay: 0,
             options: UIViewAnimationOptions.CurveLinear,
@@ -131,37 +72,64 @@ class TimerViewController: UIViewController {
             animations: {
                 self.stopButton.alpha = 1.0
             }, completion: nil)
-        
-        
-       //sound
-        
-        ButtonAudioPLayer.play()
-        
-        
-        
 
-    
+
+        
+        if !timer.valid{ //prevent more than one timer on the thread
+            timerLabel.text = timeString(timeCount)
+            timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval,
+                target: self,
+                selector: "timerDidEnd:",
+                userInfo: "Meditation Complete",
+                repeats: true) //repeating timer in the second iteration
+        }
     }
     
-    
-    //stop timer
-    @IBAction func stopTimer() {
-        
-//        let randomColor = colorWheel.randomColor()
-//        view.backgroundColor = randomColor
-//        startButton.titleLabel?.textColor = randomColor
-//        stopButton.titleLabel?.textColor = randomColor
-        
+    @IBAction func countingDown(sender: UISwitch) {
+        if !timer.valid{ //if we stopped an
+            resetTimeCount()
+        }
+    }
+    @IBAction func stopTimer(sender: UIButton) {
+        //timerLabel.text = "Timer Stopped"
         timer.invalidate()
-        counterTime.text = "00.00"
-        
+    }
+    
+    @IBAction func resetTimer(sender: UIButton) {
+        timer.invalidate()
+        resetTimeCount()
+        timerLabel.text = timeString(timeCount)
+    }
+    
+    //MARK: - Instance Methods
+    func resetTimeCount(){
+        if countingDown.on{
+            timeCount = timerEnd
+        } else {
+            timeCount = 0.0
+        }
+    }
+    
+    func timeString(time:NSTimeInterval) -> String {
+        let minutes = Int(time) / 60
+        let seconds = Int(time) % 60
+        let secondFraction = Int((time - Double(seconds)) * 10.0)
+        return String(format:"%02i:%02i.%01i",minutes,seconds,secondFraction)
+    }
+    
+    func timerDidEnd(timer:NSTimer){
+        //timerLabel.text = timer.userInfo as? String
+        let randomColor = colorWheel.randomColor()
+        view.backgroundColor = randomColor
+        startButton.titleLabel?.textColor = randomColor
+        stopButton.titleLabel?.textColor = randomColor
         
         
         UIView.animateWithDuration(1.0,
             delay: 0,
             options: UIViewAnimationOptions.CurveLinear,
             animations: {
-            self.stopButton.alpha = 0
+                self.stopButton.alpha = 0
             }, completion: nil)
         
         
@@ -171,9 +139,39 @@ class TimerViewController: UIViewController {
             animations: {
                 self.startButton.alpha = 1.0
             }, completion: nil)
-       
 
+        if countingDown.on{
+            //timer that counts down
+            timeCount = timeCount - timeInterval
+            if timeCount <= 0 {  //test for target time reached.
+                timerLabel.text = "Pizza Ready!!"
+                timer.invalidate()
+            } else { //update the time on the clock if not reached
+                timerLabel.text = timeString(timeCount)
+            }
+            
+        } else {
+            //timer that counts up
+            timeCount = timeCount + timeInterval
+            if timeCount >= timerEnd{  //test for target time reached.
+                timerLabel.text = "Pizza Ready!!"
+                timer.invalidate()
+            } else { //update the time on the clock if not reached
+                timerLabel.text = timeString(timeCount)
+            }
+            
+        }
+        
     }
+    
 }
+
+
+
+
+
+
+
+
 
 
