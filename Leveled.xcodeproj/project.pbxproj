@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B155AF11B92A6730031151E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B155AF01B92A6730031151E /* AVFoundation.framework */; };
 		6B155AF31B92A8F60031151E /* buddha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B155AF21B92A8F60031151E /* buddha.mp3 */; settings = {ASSET_TAGS = (); }; };
+		6B155AF71B93C0FF0031151E /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B155AF61B93C0FF0031151E /* StatsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6B9C25FD1B925D1F00C07485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C25FC1B925D1F00C07485 /* AppDelegate.swift */; };
 		6B9C25FF1B925D1F00C07485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C25FE1B925D1F00C07485 /* ViewController.swift */; };
 		6B9C26021B925D1F00C07485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C26001B925D1F00C07485 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		6B155AF01B92A6730031151E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6B155AF21B92A8F60031151E /* buddha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buddha.mp3; sourceTree = "<group>"; };
+		6B155AF61B93C0FF0031151E /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		6B9C25F91B925D1F00C07485 /* Leveled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leveled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B9C25FC1B925D1F00C07485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B9C25FE1B925D1F00C07485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				6B9C26081B925D1F00C07485 /* Info.plist */,
 				6B9C262C1B92622300C07485 /* TimerViewController.swift */,
 				F2FF25051B938A640047DC3F /* colorWheel.swift */,
+				6B155AF61B93C0FF0031151E /* StatsViewController.swift */,
 			);
 			path = Leveled;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				6B9C262D1B92622300C07485 /* TimerViewController.swift in Sources */,
 				6B9C25FF1B925D1F00C07485 /* ViewController.swift in Sources */,
 				6B9C25FD1B925D1F00C07485 /* AppDelegate.swift in Sources */,
+				6B155AF71B93C0FF0031151E /* StatsViewController.swift in Sources */,
 				F2FF25061B938A640047DC3F /* colorWheel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
