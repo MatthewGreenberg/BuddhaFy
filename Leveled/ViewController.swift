@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     var location = CGPoint(x: 0, y: 0)
     
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         _ = touches.first as UITouch!
         
@@ -49,8 +50,18 @@ class ViewController: UIViewController {
     }
 
     
-      
+    
+    override func viewDidAppear(animated: Bool) {
+        let pulseAnimation = CABasicAnimation(keyPath: "opacity")
+        pulseAnimation.duration = 1.5
+        pulseAnimation.fromValue = 0.2
+        pulseAnimation.toValue = 0.5
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        pulseAnimation.autoreverses = true
+        pulseAnimation.repeatCount = FLT_MAX
+        self.Arrow.layer.addAnimation(pulseAnimation, forKey: nil)
 
+    }
     
     
     
@@ -68,36 +79,27 @@ class ViewController: UIViewController {
         
         buddah.center = CGPointMake(160, 330)
         MeditateLabel.alpha = 0
-        Arrow.alpha = 0
+       
       
         
         UIView.animateWithDuration(1.5,
             delay: 2.0,
-            options: UIViewAnimationOptions.CurveEaseOut,
+            options: UIViewAnimationOptions.CurveLinear,
             animations: {
                 self.welcomeToBuddhafy.alpha = 0
             }, completion: nil)
         
         
         UIView.animateWithDuration(2.0,
-            delay: 1.5,
+            delay: 1.8,
             options: UIViewAnimationOptions.CurveLinear,
             animations: {
                 self.MeditateLabel.alpha = 1
             }, completion: nil)
         
-        UIView.animateWithDuration(1.0,
-            delay: 1.0,
-            options: UIViewAnimationOptions.CurveLinear,
-            animations: {
-                self.Arrow.alpha = 1
-            }, completion: nil)
         
         
-        UIDynamicItemBehavior *elasticityBehavior = [[UIDynamicItemBehavior, alloc] initWithItems,:@[self.buddah]];
-        elasticityBehavior.elasticity = 0.7f;
-        [self.animator addBehavior:elasticityBehavior];
-
+        
 
 
     }
