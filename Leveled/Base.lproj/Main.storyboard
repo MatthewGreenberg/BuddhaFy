@@ -37,9 +37,21 @@
                                     <segue destination="m8s-TX-O6b" kind="modal" id="kNU-RJ-dX2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89S-I5-Fsx">
+                                <rect key="frame" x="79" y="473" width="168" height="30"/>
+                                <state key="normal" title="Account Stuff"/>
+                                <connections>
+                                    <segue destination="r3l-mh-qL3" kind="modal" id="dlI-Rw-WKo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="89S-I5-Fsx" secondAttribute="trailing" constant="53" id="GeW-be-vsp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="89S-I5-Fsx" secondAttribute="bottom" constant="65" id="QKU-yF-Ns8"/>
+                            <constraint firstItem="89S-I5-Fsx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="YPf-G3-4Im"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ceA-Yw-KDi" appends="YES" id="ARU-Ji-DvT"/>
                         </connections>
@@ -67,6 +79,24 @@
                 </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="694" y="366"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="69u-0U-Rfk">
+            <objects>
+                <viewController id="r3l-mh-qL3" customClass="LoginViewController" customModule="Leveled" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cqt-iY-QTI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ib2-dx-NHt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IIg-R0-2pJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.79923930919999997" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyV-r2-6rE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="1021"/>
         </scene>
         <!--Title-->
         <scene sceneID="EBF-TU-jWf">
