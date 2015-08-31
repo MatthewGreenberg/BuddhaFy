@@ -11,10 +11,14 @@ import QuartzCore
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var Arrow: UIImageView!
     @IBOutlet weak var buddah: UIImageView!
     
-    @IBOutlet weak var titleLabel: UILabel!
+  
+    @IBOutlet weak var welcomeToBuddhafy: UILabel!
    
+    @IBOutlet weak var MeditateLabel: UIButton!
     
     
     var location = CGPoint(x: 0, y: 0)
@@ -63,7 +67,39 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         buddah.center = CGPointMake(160, 330)
-        titleLabel.
+        MeditateLabel.alpha = 0
+        Arrow.alpha = 0
+      
+        
+        UIView.animateWithDuration(1.5,
+            delay: 2.0,
+            options: UIViewAnimationOptions.CurveEaseOut,
+            animations: {
+                self.welcomeToBuddhafy.alpha = 0
+            }, completion: nil)
+        
+        
+        UIView.animateWithDuration(2.0,
+            delay: 1.5,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.MeditateLabel.alpha = 1
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0,
+            delay: 1.0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.Arrow.alpha = 1
+            }, completion: nil)
+        
+        
+        UIDynamicItemBehavior *elasticityBehavior = [[UIDynamicItemBehavior, alloc] initWithItems,:@[self.buddah]];
+        elasticityBehavior.elasticity = 0.7f;
+        [self.animator addBehavior:elasticityBehavior];
+
+
+
     }
 
     override func didReceiveMemoryWarning() {

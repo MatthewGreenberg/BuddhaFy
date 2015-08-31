@@ -20,13 +20,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="9qy-yL-CcT">
-                                <rect key="frame" x="41" y="302" width="240" height="128"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dN-gw-W1g">
-                                <rect key="frame" x="125" y="167" width="72" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dN-gw-W1g">
+                                <rect key="frame" x="118" y="168" width="87" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="YiU-pk-cmF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
                                 <state key="normal" title="Meditate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,16 +33,48 @@
                                     <segue destination="HNW-is-Rwe" kind="modal" id="FYc-xu-9db"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Buddhafy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da6-VI-NLS">
+                                <rect key="frame" x="30" y="79" width="261" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="9Xf-p0-uxe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-204-xl.png" translatesAutoresizingMaskIntoConstraints="NO" id="B1W-pv-ebQ">
+                                <rect key="frame" x="147" y="136" width="28" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="DLQ-O8-JwI"/>
+                                    <constraint firstAttribute="width" constant="28" id="DVh-mh-HRw"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="9qy-yL-CcT">
+                                <rect key="frame" x="40" y="303" width="240" height="128"/>
+                                <gestureRecognizers/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="B1W-pv-ebQ" firstAttribute="top" secondItem="Da6-VI-NLS" secondAttribute="bottom" constant="26" id="0Ov-6m-7Up"/>
+                            <constraint firstItem="0dN-gw-W1g" firstAttribute="centerX" secondItem="B1W-pv-ebQ" secondAttribute="centerX" id="Jp5-5g-zIU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0dN-gw-W1g" secondAttribute="trailing" constant="99" id="aw6-17-aD9"/>
+                            <constraint firstItem="0dN-gw-W1g" firstAttribute="top" secondItem="Da6-VI-NLS" secondAttribute="bottom" constant="58" id="j6q-ZI-AUR"/>
+                            <constraint firstItem="Da6-VI-NLS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="jpS-OF-dcS"/>
+                            <constraint firstItem="Da6-VI-NLS" firstAttribute="centerX" secondItem="B1W-pv-ebQ" secondAttribute="centerX" id="lz9-eL-qDa"/>
+                            <constraint firstItem="Da6-VI-NLS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s4c-xv-SMe"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ceA-Yw-KDi" appends="YES" id="ARU-Ji-DvT"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Leveled" id="fGQ-ki-SJ6"/>
                     <connections>
+                        <outlet property="Arrow" destination="B1W-pv-ebQ" id="p7f-3Z-Hwu"/>
+                        <outlet property="MeditateLabel" destination="0dN-gw-W1g" id="p1g-0z-oGd"/>
                         <outlet property="buddah" destination="9qy-yL-CcT" id="GGn-8c-ebj"/>
+                        <outlet property="welcomeToBuddhafy" destination="Da6-VI-NLS" id="NNd-p6-e3S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -417,6 +448,7 @@
     </scenes>
     <resources>
         <image name="Image" width="188" height="266"/>
+        <image name="arrow-204-xl.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RJ1-uL-5aa"/>
