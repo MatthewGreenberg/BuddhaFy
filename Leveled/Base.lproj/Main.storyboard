@@ -58,7 +58,7 @@
                     </connections>
                 </rotationGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="646" y="378"/>
+            <point key="canvasLocation" x="646" y="366"/>
         </scene>
         <!--Time Picker View Controller-->
         <scene sceneID="nRa-gI-F4V">
@@ -73,22 +73,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQM-2V-hae">
-                                <rect key="frame" x="141" y="68" width="38" height="30"/>
-                                <state key="normal" title="5 Min"/>
+                                <rect key="frame" x="30" y="225" width="78" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="5 min"/>
                                 <connections>
-                                    <segue destination="m8s-TX-O6b" kind="modal" identifier="5 minutes" id="RJ1-uL-5aa"/>
+                                    <segue destination="m8s-TX-O6b" kind="modal" identifier="5 minutes" modalTransitionStyle="crossDissolve" id="RJ1-uL-5aa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-Xn-kZd">
+                                <rect key="frame" x="121" y="225" width="78" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="10 min"/>
+                                <connections>
+                                    <segue destination="m8s-TX-O6b" kind="modal" identifier="10 minutes" modalTransitionStyle="crossDissolve" id="fww-OL-8nl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3l-qN-Ryl">
+                                <rect key="frame" x="212" y="225" width="78" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="15 min"/>
+                                <connections>
+                                    <segue destination="m8s-TX-O6b" kind="modal" identifier="15 minutes" modalTransitionStyle="crossDissolve" id="s0c-M9-aVw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jee-7H-AL2">
+                                <rect key="frame" x="30" y="292" width="78" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="20 min"/>
+                                <connections>
+                                    <segue destination="m8s-TX-O6b" kind="modal" identifier="20 minutes" modalTransitionStyle="crossDissolve" id="XUr-tm-Xso"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIK-ku-moR">
+                                <rect key="frame" x="121" y="292" width="78" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="25 min"/>
+                                <connections>
+                                    <segue destination="m8s-TX-O6b" kind="modal" identifier="25 minutes" modalTransitionStyle="crossDissolve" id="4TG-1R-cHy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0z-Kw-9S4">
+                                <rect key="frame" x="212" y="292" width="78" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="30 min"/>
+                                <connections>
+                                    <segue destination="m8s-TX-O6b" kind="modal" identifier="30 minutes" modalTransitionStyle="crossDissolve" id="e3t-FB-Otc"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="durationButtonFive" destination="pQM-2V-hae" id="t2Y-Xd-YEk"/>
+                        <outlet property="durationButton10" destination="SJO-Xn-kZd" id="IhO-zP-Jix"/>
+                        <outlet property="durationButton15" destination="z3l-qN-Ryl" id="rEK-aY-Y4j"/>
+                        <outlet property="durationButton20" destination="Jee-7H-AL2" id="8LF-zE-5NK"/>
+                        <outlet property="durationButton25" destination="UIK-ku-moR" id="85v-X9-cW4"/>
+                        <outlet property="durationButton30" destination="G0z-Kw-9S4" id="Xgi-cJ-2mM"/>
+                        <outlet property="durationButton5" destination="pQM-2V-hae" id="kvZ-aC-LxZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yB0-rd-hy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159" y="366"/>
+            <point key="canvasLocation" x="1145" y="366"/>
         </scene>
         <!--Title-->
         <scene sceneID="EBF-TU-jWf">
@@ -167,17 +213,17 @@
                         <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tCk-gh-Xdr" firstAttribute="baseline" secondItem="R1K-6K-nRH" secondAttribute="baseline" id="0EE-XZ-lMO"/>
-                            <constraint firstItem="HVs-La-Svz" firstAttribute="top" secondItem="hbt-DK-7p7" secondAttribute="bottom" constant="88" id="17c-yu-7zd"/>
                             <constraint firstItem="Z32-RS-738" firstAttribute="leading" secondItem="iEV-N1-Y6m" secondAttribute="leading" id="1kl-OB-0JM"/>
                             <constraint firstItem="Z32-RS-738" firstAttribute="top" secondItem="iEV-N1-Y6m" secondAttribute="top" id="2Aj-z1-jJH"/>
                             <constraint firstItem="y9T-me-E8w" firstAttribute="top" secondItem="Qzh-6e-clh" secondAttribute="top" id="2Ks-iW-nsC"/>
                             <constraint firstItem="y9T-me-E8w" firstAttribute="leading" secondItem="iEV-N1-Y6m" secondAttribute="leadingMargin" constant="84" id="BRI-6C-Aq1"/>
                             <constraint firstItem="R1K-6K-nRH" firstAttribute="centerX" secondItem="Qzh-6e-clh" secondAttribute="centerX" id="HYC-TM-Wqr"/>
-                            <constraint firstItem="2gx-i6-pJf" firstAttribute="top" secondItem="R1K-6K-nRH" secondAttribute="bottom" constant="46" id="Rqd-bN-9f9"/>
+                            <constraint firstItem="HVs-La-Svz" firstAttribute="top" secondItem="hbt-DK-7p7" secondAttribute="bottom" constant="88" id="Kup-qw-uZI"/>
                             <constraint firstItem="Qzh-6e-clh" firstAttribute="centerX" secondItem="HVs-La-Svz" secondAttribute="centerX" id="TR8-1X-13B"/>
                             <constraint firstItem="y9T-me-E8w" firstAttribute="centerX" secondItem="iEV-N1-Y6m" secondAttribute="centerX" id="V2X-J1-06t"/>
                             <constraint firstItem="y9T-me-E8w" firstAttribute="baseline" secondItem="Qzh-6e-clh" secondAttribute="firstBaseline" id="YeV-kJ-78w"/>
                             <constraint firstItem="Qzh-6e-clh" firstAttribute="baseline" secondItem="y9T-me-E8w" secondAttribute="firstBaseline" id="eMx-qf-unl"/>
+                            <constraint firstItem="2gx-i6-pJf" firstAttribute="top" secondItem="R1K-6K-nRH" secondAttribute="bottom" constant="46" id="ipJ-4S-e13"/>
                             <constraint firstItem="R1K-6K-nRH" firstAttribute="top" secondItem="y9T-me-E8w" secondAttribute="bottom" constant="57" id="jPF-Dq-ab8"/>
                             <constraint firstItem="R1K-6K-nRH" firstAttribute="leading" secondItem="tCk-gh-Xdr" secondAttribute="leading" id="qoL-fq-rzl"/>
                             <constraint firstItem="y9T-me-E8w" firstAttribute="trailing" secondItem="Qzh-6e-clh" secondAttribute="trailing" id="uWk-Ex-HUG"/>
@@ -196,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vwg-Lc-4y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="398"/>
+            <point key="canvasLocation" x="1598" y="366"/>
         </scene>
         <!--Stats View Controller-->
         <scene sceneID="pKx-Z8-Gcv">
@@ -286,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHB-mU-0bD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="1141"/>
+            <point key="canvasLocation" x="121" y="1042"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZMM-oo-GLv">
@@ -318,5 +364,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="806-C8-wEx"/>
+        <segue reference="XUr-tm-Xso"/>
     </inferredMetricsTieBreakers>
 </document>
