@@ -99,7 +99,7 @@
                     </connections>
                 </rotationGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1267" y="944"/>
+            <point key="canvasLocation" x="594" y="250"/>
         </scene>
         <!--Time Picker View Controller-->
         <scene sceneID="nRa-gI-F4V">

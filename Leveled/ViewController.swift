@@ -45,6 +45,9 @@ class ViewController: UIViewController {
         UIView.animateWithDuration(1.0, animations: {
             self.buddah.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
         })
+        UIView.animateWithDuration(1.0, animations: {
+            self.buddah.transform = CGAffineTransformMakeRotation((0.0 * CGFloat(M_PI)) / 180.0)
+        })
 
     
     }
