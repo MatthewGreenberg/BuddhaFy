@@ -20,6 +20,7 @@ class TimerViewController: UIViewController {
     var audioPlayer = AVAudioPlayer()
     let colorWheel = ColorWheel()
     var ButtonAudioUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buddha", ofType: "mp3")!)
+    var timerLabelText = ""
     
     @IBOutlet weak var countingDown: UISwitch!
     @IBOutlet weak var startButton: UIButton!
@@ -38,6 +39,7 @@ class TimerViewController: UIViewController {
         self.startButton.alpha = 0
         self.stopButton.alpha = 0
         self.Resume.alpha = 0
+        timerLabel.text = timerLabelText
         
     }
 
