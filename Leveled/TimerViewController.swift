@@ -21,6 +21,7 @@ class TimerViewController: UIViewController {
     let colorWheel = ColorWheel()
     var ButtonAudioUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buddha", ofType: "mp3")!)
     
+    
     @IBOutlet weak var countingDown: UISwitch!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
@@ -38,12 +39,15 @@ class TimerViewController: UIViewController {
         self.startButton.alpha = 0
         self.stopButton.alpha = 0
         self.Resume.alpha = 0
+        let initialValue = timeCount
+        timerLabel.text = timeString(initialValue)
         
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         UIView.animateWithDuration(1.0, animations: {void in self.startButton.alpha = 1.0})
+        
         
     }
 
@@ -220,6 +224,17 @@ class TimerViewController: UIViewController {
         }
 
         
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showMeditationStats" {
+            let statsViewController = segue.destinationViewController as! StatsViewController
+             statsViewController.segueStatsLabel = timeString(timeCount)
+            let myIntValue = Int(timeCount / 60)
+            statsViewController.segueXPLabel = "\(myIntValue) XP points!"
+            
+        }
     }
     
     
