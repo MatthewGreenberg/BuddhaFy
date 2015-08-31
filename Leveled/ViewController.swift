@@ -63,6 +63,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         buddah.center = CGPointMake(160, 330)
+        titleLabel.
     }
 
     override func didReceiveMemoryWarning() {

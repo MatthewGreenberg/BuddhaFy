@@ -21,6 +21,12 @@ class TimePickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        durationButton5.layer.cornerRadius = 5
+        durationButton10.layer.cornerRadius = 5
+        durationButton15.layer.cornerRadius = 5
+        durationButton20.layer.cornerRadius = 5
+        durationButton25.layer.cornerRadius = 5
+        durationButton30.layer.cornerRadius = 5
    
         
 
@@ -38,6 +44,7 @@ class TimePickerViewController: UIViewController {
             let timerViewController = segue.destinationViewController as! TimerViewController
             timerViewController.timerLabelText = "05:00"
             timerViewController.timeCount = Double(300.0)
+            timerViewController.timerDuration = Double(300.0)
             
         }
         else if segue.identifier == "10 minutes" {
@@ -45,30 +52,35 @@ class TimePickerViewController: UIViewController {
                 let timerViewController = segue.destinationViewController as! TimerViewController
                 timerViewController.timerLabelText = "10:00"
                 timerViewController.timeCount = Double(600.0)
+                timerViewController.timerDuration = Double(600.0)
         }
         else if segue.identifier == "15 minutes" {
             
             let timerViewController = segue.destinationViewController as! TimerViewController
             timerViewController.timerLabelText = "15:00"
             timerViewController.timeCount = Double(900.0)
+            timerViewController.timerDuration = Double(900.0)
         }
         else if segue.identifier == "20 minutes" {
             
             let timerViewController = segue.destinationViewController as! TimerViewController
             timerViewController.timerLabelText = "20:00"
             timerViewController.timeCount = Double(1200.0)
+            timerViewController.timerDuration = Double(1200.0)
         }
         else if segue.identifier == "25 minutes" {
             
             let timerViewController = segue.destinationViewController as! TimerViewController
             timerViewController.timerLabelText = "25:00"
             timerViewController.timeCount = Double(1500.0)
+            timerViewController.timerDuration = Double(1500.0)
         }
         else if segue.identifier == "30 minutes" {
             
             let timerViewController = segue.destinationViewController as! TimerViewController
             timerViewController.timerLabelText = "30:00"
             timerViewController.timeCount = Double(1800.0)
+            timerViewController.timerDuration = Double(1800.0)
         }
         
     }

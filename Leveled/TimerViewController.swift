@@ -22,6 +22,7 @@ class TimerViewController: UIViewController {
     var ButtonAudioUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buddha", ofType: "mp3")!)
     var timerLabelText = ""
     
+    var timerDuration : Double = 0.0
     
     @IBOutlet weak var countingDown: UISwitch!
     @IBOutlet weak var startButton: UIButton!
@@ -36,6 +37,9 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startButton.layer.cornerRadius = 10
+        stopButton.layer.cornerRadius = 10
+        
         try! ButtonAudioPLayer = AVAudioPlayer(contentsOfURL: ButtonAudioUrl)
         self.startButton.alpha = 0
         self.stopButton.alpha = 0
@@ -113,15 +117,15 @@ class TimerViewController: UIViewController {
     
     @IBAction func resetTimer(sender: UIButton) {
         
-        UIView.animateWithDuration(1.0,
+        UIView.animateWithDuration(0.7,
             delay: 0,
             options: UIViewAnimationOptions.CurveLinear,
             animations: {
                 self.Pause.alpha = 0
             }, completion: nil)
         
-        UIView.animateWithDuration(1.0,
-            delay: 1.0,
+        UIView.animateWithDuration(0.7,
+            delay: 0.7,
             options: UIViewAnimationOptions.CurveLinear,
             animations: {
                 self.Resume.alpha = 1.0
@@ -155,6 +159,7 @@ class TimerViewController: UIViewController {
                 
                 
                 timer.invalidate()
+                ButtonAudioPLayer.play()
             } else { //update the time on the clock if not reached
                 timerLabel.text = timeString(timeCount)
             }
@@ -178,15 +183,15 @@ class TimerViewController: UIViewController {
         
         
         
-        UIView.animateWithDuration(1.0,
+        UIView.animateWithDuration(0.7,
             delay: 0,
             options: UIViewAnimationOptions.CurveLinear,
             animations: {
                 self.Resume.alpha = 0
             }, completion: nil)
-        
-        UIView.animateWithDuration(1.0,
-            delay: 1.0,
+
+        UIView.animateWithDuration(0.7,
+            delay: 0.7,
             options: UIViewAnimationOptions.CurveLinear,
             animations: {
                 self.Pause.alpha = 1.0
@@ -233,9 +238,21 @@ class TimerViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMeditationStats" {
             let statsViewController = segue.destinationViewController as! StatsViewController
-             statsViewController.segueStatsLabel = timeString(timeCount)
-            let myIntValue = Int(timeCount / 60)
-            statsViewController.segueXPLabel = "\(myIntValue) XP points!"
+            
+             statsViewController.segueStatsLabel = timeString( timerDuration - timeCount)
+            let myIntValue = Int((timerDuration - timeCount) / 60)
+            
+            if myIntValue == 0 {
+             statsViewController.segueXPLabel = "No XP points :( "
+            }
+            else if myIntValue == 1 {
+            statsViewController.segueXPLabel = "\(myIntValue) XP point!"
+            }
+            else {
+                statsViewController.segueXPLabel = "\(myIntValue) XP point!"
+
+            
+            }
             
         }
     }
