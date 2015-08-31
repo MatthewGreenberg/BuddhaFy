@@ -13,6 +13,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var buddah: UIImageView!
     
+    @IBOutlet weak var titleLabel: UILabel!
+   
+    
     
     var location = CGPoint(x: 0, y: 0)
     
@@ -40,6 +43,16 @@ class ViewController: UIViewController {
 
     
     }
+
+    
+      
+
+    
+    
+    
+    
+
+
     
 
     
