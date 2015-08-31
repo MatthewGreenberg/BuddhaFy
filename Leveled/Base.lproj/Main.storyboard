@@ -58,10 +58,7 @@
                     </connections>
                 </rotationGestureRecognizer>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="646" y="378"/>
-=======
-            <point key="canvasLocation" x="621" y="366"/>
         </scene>
         <!--Time Picker View Controller-->
         <scene sceneID="nRa-gI-F4V">
@@ -92,7 +89,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yB0-rd-hy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1159" y="366"/>
->>>>>>> add_timePicker_view
         </scene>
         <!--Title-->
         <scene sceneID="EBF-TU-jWf">
@@ -200,11 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vwg-Lc-4y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="1497" y="398"/>
-=======
-            <point key="canvasLocation" x="1023" y="1183"/>
->>>>>>> add_timePicker_view
         </scene>
         <!--Stats View Controller-->
         <scene sceneID="pKx-Z8-Gcv">
