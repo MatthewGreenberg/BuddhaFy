@@ -27,6 +27,8 @@ class TimePickerViewController: UIViewController {
         durationButton20.layer.cornerRadius = 5
         durationButton25.layer.cornerRadius = 5
         durationButton30.layer.cornerRadius = 5
+        
+      
    
         
 

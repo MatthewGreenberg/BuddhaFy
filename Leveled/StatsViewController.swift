@@ -18,7 +18,7 @@ class StatsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        OkButton.layer.cornerRadius = 5
+        OkButton.layer.cornerRadius = 10
         statsLabel.text = segueStatsLabel
         xpPoints.text = segueXPLabel
         
