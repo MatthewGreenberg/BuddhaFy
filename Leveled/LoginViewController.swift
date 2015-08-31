@@ -19,6 +19,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+
 
     }
     
@@ -30,6 +33,41 @@ class LoginViewController: UIViewController {
     @IBAction func getRequest() {
         getUserData()
         print(userInfo)
+    }
+    
+    @IBAction func signUpUserBttn() {
+        signUpUser()
+        
+    }
+    
+    func signUpUser() {
+        let urlPath : String = "http://localhost:3000/users.json/"
+        let url : NSURL = NSURL(string: urlPath)!
+        let request : NSMutableURLRequest = NSMutableURLRequest(URL:url)
+        
+        request.HTTPMethod = "POST"
+        
+        let username = usernameField.text
+        let password = passwordField.text
+        
+        var dataString = "user[username]=" + username! + "&" + "user[password]=" + password!
+        
+        let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = requestBodyData
+        
+        let queue:NSOperationQueue = NSOperationQueue()
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler: {(response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
+            let newData: NSString = NSString(data: data!, encoding: NSUTF8StringEncoding)!
+            
+            let stringArray = newData.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet)
+//            set core data
+            
+            print(stringArray[stringArray.count-2])
+            
+            
+        })
+        
     }
     
     func getUserData() {
@@ -47,8 +85,6 @@ class LoginViewController: UIViewController {
         })
     }
     
-    func loginUser(){
-        let urlPath : String = "http://localhost:3000/users/create"
-    }
+    
 
 }

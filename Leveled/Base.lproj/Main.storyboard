@@ -97,6 +97,8 @@
                                 <state key="normal" title="Create User"/>
                                 <connections>
                                     <action selector="getRequest" destination="r3l-mh-qL3" eventType="touchUpInside" id="oE4-3M-cxI"/>
+                                    <action selector="signUpUserBttn" destination="r3l-mh-qL3" eventType="touchUpInside" id="WZg-T1-UlF"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="L13-6a-GSk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgI-57-pCz">
@@ -162,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZyV-r2-6rE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="1021"/>
+            <point key="canvasLocation" x="910" y="1089"/>
         </scene>
         <!--Title-->
         <scene sceneID="EBF-TU-jWf">
@@ -258,4 +260,7 @@
     <resources>
         <image name="Image" width="283" height="400"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="L13-6a-GSk"/>
+    </inferredMetricsTieBreakers>
 </document>
