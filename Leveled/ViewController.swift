@@ -79,16 +79,9 @@ class ViewController: UIViewController {
         
         buddah.center = CGPointMake(160, 330)
         MeditateLabel.alpha = 0
+        
        
       
-        
-        UIView.animateWithDuration(1.5,
-            delay: 2.0,
-            options: UIViewAnimationOptions.CurveLinear,
-            animations: {
-                self.welcomeToBuddhafy.alpha = 0
-            }, completion: nil)
-        
         
         UIView.animateWithDuration(2.0,
             delay: 1.8,
