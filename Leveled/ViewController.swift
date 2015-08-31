@@ -91,6 +91,13 @@ class ViewController: UIViewController {
             }, completion: nil)
         
         
+        UIView.animateWithDuration(2.0,
+            delay: 1.8,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                self.welcomeToBuddhafy.alpha = 0
+            }, completion: nil)
+
         
         
 
