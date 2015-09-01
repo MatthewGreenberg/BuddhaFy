@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4918D75A1B96030D002C56B3 /* UserData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4918D7591B96030D002C56B3 /* UserData.plist */; settings = {ASSET_TAGS = (); }; };
 		6B155AF11B92A6730031151E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B155AF01B92A6730031151E /* AVFoundation.framework */; };
 		6B155AF31B92A8F60031151E /* buddha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B155AF21B92A8F60031151E /* buddha.mp3 */; settings = {ASSET_TAGS = (); }; };
 		6B155AF71B93C0FF0031151E /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B155AF61B93C0FF0031151E /* StatsViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4918D7591B96030D002C56B3 /* UserData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserData.plist; sourceTree = "<group>"; };
 		6B155AF01B92A6730031151E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6B155AF21B92A8F60031151E /* buddha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buddha.mp3; sourceTree = "<group>"; };
 		6B155AF61B93C0FF0031151E /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				F2D807871B94A2F700720B90 /* TimePickerViewController.swift */,
 				6B155B041B950CCB0031151E /* GameInfoViewController.swift */,
 				6B155B081B95E2620031151E /* LoginViewController.swift */,
-				4918D7591B96030D002C56B3 /* UserData.plist */,
 			);
 			path = Leveled;
 			sourceTree = "<group>";
@@ -157,7 +154,6 @@
 			files = (
 				6B155AF31B92A8F60031151E /* buddha.mp3 in Resources */,
 				6B9C26071B925D1F00C07485 /* LaunchScreen.storyboard in Resources */,
-				4918D75A1B96030D002C56B3 /* UserData.plist in Resources */,
 				6B9C26041B925D1F00C07485 /* Assets.xcassets in Resources */,
 				6B155B011B94EE120031151E /* arrow-204-xl.png in Resources */,
 				6B9C26021B925D1F00C07485 /* Main.storyboard in Resources */,
