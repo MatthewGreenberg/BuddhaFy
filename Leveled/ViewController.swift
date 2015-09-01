@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     
     
     override func viewDidAppear(animated: Bool) {
+        
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
         pulseAnimation.duration = 1.0
         pulseAnimation.fromValue = 0.2
@@ -63,6 +64,7 @@ class ViewController: UIViewController {
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = FLT_MAX
         self.Arrow.layer.addAnimation(pulseAnimation, forKey: nil)
+       
 
     }
     
@@ -83,7 +85,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        
         
         
         buddah.center = CGPointMake(160, 330)
@@ -107,7 +108,7 @@ class ViewController: UIViewController {
                 self.welcomeToBuddhafy.alpha = 0
             }, completion: nil)
 
-        
+      
         
 
 
