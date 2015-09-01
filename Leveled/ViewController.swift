@@ -87,7 +87,7 @@ class ViewController: UIViewController {
        
       
         
-        UIView.animateWithDuration(2.0,
+        UIView.animateWithDuration(1.0,
             delay: 1.8,
             options: UIViewAnimationOptions.CurveLinear,
             animations: {
