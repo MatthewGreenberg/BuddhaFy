@@ -9,17 +9,29 @@
 /* Begin PBXBuildFile section */
 		6B155AF11B92A6730031151E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B155AF01B92A6730031151E /* AVFoundation.framework */; };
 		6B155AF31B92A8F60031151E /* buddha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B155AF21B92A8F60031151E /* buddha.mp3 */; settings = {ASSET_TAGS = (); }; };
+		6B155AF71B93C0FF0031151E /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B155AF61B93C0FF0031151E /* StatsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6B155B011B94EE120031151E /* arrow-204-xl.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B155B001B94EE120031151E /* arrow-204-xl.png */; settings = {ASSET_TAGS = (); }; };
+		6B155B051B950CCB0031151E /* GameInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B155B041B950CCB0031151E /* GameInfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6B155B071B95108B0031151E /* question-mark-thiner-border-md.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B155B061B95108B0031151E /* question-mark-thiner-border-md.png */; settings = {ASSET_TAGS = (); }; };
+		6B155B091B95E2620031151E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B155B081B95E2620031151E /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6B9C25FD1B925D1F00C07485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C25FC1B925D1F00C07485 /* AppDelegate.swift */; };
 		6B9C25FF1B925D1F00C07485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C25FE1B925D1F00C07485 /* ViewController.swift */; };
 		6B9C26021B925D1F00C07485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C26001B925D1F00C07485 /* Main.storyboard */; };
 		6B9C26041B925D1F00C07485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C26031B925D1F00C07485 /* Assets.xcassets */; };
 		6B9C26071B925D1F00C07485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C26051B925D1F00C07485 /* LaunchScreen.storyboard */; };
 		6B9C262D1B92622300C07485 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C262C1B92622300C07485 /* TimerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F2D807881B94A2F700720B90 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D807871B94A2F700720B90 /* TimePickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F2FF25061B938A640047DC3F /* colorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF25051B938A640047DC3F /* colorWheel.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B155AF01B92A6730031151E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6B155AF21B92A8F60031151E /* buddha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buddha.mp3; sourceTree = "<group>"; };
+		6B155AF61B93C0FF0031151E /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		6B155B001B94EE120031151E /* arrow-204-xl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-204-xl.png"; sourceTree = "<group>"; };
+		6B155B041B950CCB0031151E /* GameInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoViewController.swift; sourceTree = "<group>"; };
+		6B155B061B95108B0031151E /* question-mark-thiner-border-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-mark-thiner-border-md.png"; sourceTree = "<group>"; };
+		6B155B081B95E2620031151E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6B9C25F91B925D1F00C07485 /* Leveled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leveled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B9C25FC1B925D1F00C07485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B9C25FE1B925D1F00C07485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +40,8 @@
 		6B9C26061B925D1F00C07485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B9C26081B925D1F00C07485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B9C262C1B92622300C07485 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		F2D807871B94A2F700720B90 /* TimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
+		F2FF25051B938A640047DC3F /* colorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorWheel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +79,18 @@
 				6B155AF21B92A8F60031151E /* buddha.mp3 */,
 				6B9C25FC1B925D1F00C07485 /* AppDelegate.swift */,
 				6B9C25FE1B925D1F00C07485 /* ViewController.swift */,
+				6B155B061B95108B0031151E /* question-mark-thiner-border-md.png */,
+				6B155B001B94EE120031151E /* arrow-204-xl.png */,
 				6B9C26001B925D1F00C07485 /* Main.storyboard */,
 				6B9C26031B925D1F00C07485 /* Assets.xcassets */,
 				6B9C26051B925D1F00C07485 /* LaunchScreen.storyboard */,
 				6B9C26081B925D1F00C07485 /* Info.plist */,
 				6B9C262C1B92622300C07485 /* TimerViewController.swift */,
+				F2FF25051B938A640047DC3F /* colorWheel.swift */,
+				6B155AF61B93C0FF0031151E /* StatsViewController.swift */,
+				F2D807871B94A2F700720B90 /* TimePickerViewController.swift */,
+				6B155B041B950CCB0031151E /* GameInfoViewController.swift */,
+				6B155B081B95E2620031151E /* LoginViewController.swift */,
 			);
 			path = Leveled;
 			sourceTree = "<group>";
@@ -134,7 +155,9 @@
 				6B155AF31B92A8F60031151E /* buddha.mp3 in Resources */,
 				6B9C26071B925D1F00C07485 /* LaunchScreen.storyboard in Resources */,
 				6B9C26041B925D1F00C07485 /* Assets.xcassets in Resources */,
+				6B155B011B94EE120031151E /* arrow-204-xl.png in Resources */,
 				6B9C26021B925D1F00C07485 /* Main.storyboard in Resources */,
+				6B155B071B95108B0031151E /* question-mark-thiner-border-md.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +169,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9C262D1B92622300C07485 /* TimerViewController.swift in Sources */,
+				F2D807881B94A2F700720B90 /* TimePickerViewController.swift in Sources */,
 				6B9C25FF1B925D1F00C07485 /* ViewController.swift in Sources */,
 				6B9C25FD1B925D1F00C07485 /* AppDelegate.swift in Sources */,
+				6B155B091B95E2620031151E /* LoginViewController.swift in Sources */,
+				6B155AF71B93C0FF0031151E /* StatsViewController.swift in Sources */,
+				F2FF25061B938A640047DC3F /* colorWheel.swift in Sources */,
+				6B155B051B950CCB0031151E /* GameInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
