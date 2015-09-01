@@ -55,31 +55,27 @@ class ViewController: UIViewController {
     
     
     override func viewDidAppear(animated: Bool) {
+        
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
-        pulseAnimation.duration = 1.5
+        pulseAnimation.duration = 1.0
         pulseAnimation.fromValue = 0.2
         pulseAnimation.toValue = 0.5
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = FLT_MAX
         self.Arrow.layer.addAnimation(pulseAnimation, forKey: nil)
+       
 
     }
+
     
-    
-    
+    // found repeate but this will not animate as I want.
+    //UIView.animateWithDuration(2.0, delay: 0.2, options: UIViewAnimationOptions.Repeat, animations: {
  
-    
-
-
-    
-
-    
-
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        
         
         buddah.center = CGPointMake(160, 330)
         MeditateLabel.alpha = 0
@@ -102,7 +98,7 @@ class ViewController: UIViewController {
                 self.welcomeToBuddhafy.alpha = 0
             }, completion: nil)
 
-        
+      
         
 
 
