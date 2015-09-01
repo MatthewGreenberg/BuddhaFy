@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var Arrow: UIImageView!
     @IBOutlet weak var buddah: UIImageView!
     
+    
+    let userKey = "userId"
+    
+
+    
   
     @IBOutlet weak var welcomeToBuddhafy: UILabel!
    
@@ -76,13 +81,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
       
         
-        
+        //Animation
         buddah.center = CGPointMake(160, 330)
         MeditateLabel.alpha = 0
-        
-       
-      
-        
         UIView.animateWithDuration(1.0,
             delay: 1.8,
             options: UIViewAnimationOptions.CurveLinear,
@@ -97,6 +98,30 @@ class ViewController: UIViewController {
             animations: {
                 self.welcomeToBuddhafy.alpha = 0
             }, completion: nil)
+        
+        if let value =  NSUserDefaults.standardUserDefaults().valueForKey(userKey) {
+            
+           //segue to the main page
+            
+            
+            
+            
+        }
+            
+        else {
+            
+            //segue to the login page
+            
+            
+            
+        }
+        
+        
+        
+        NSUserDefaults.standardUserDefaults().setValue("Some Value!", forKey: userKey)
+        
+            performSegueWithIdentifier("segueToSignIn", sender: nil)
+        
 
       
         
