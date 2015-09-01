@@ -70,7 +70,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ibO-eJ-Ajr" kind="modal" id="EZJ-PO-jew"/>
+                                    <segue destination="ibO-eJ-Ajr" kind="modal" identifier="segueToSignIn" id="EZJ-PO-jew"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -512,7 +512,7 @@
                                     <constraint firstAttribute="height" constant="30" id="uIL-GI-ibR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRc-gM-74M">
                                 <rect key="frame" x="121" y="118" width="79" height="21"/>
@@ -608,7 +608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ja-bk-bdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="1213"/>
+            <point key="canvasLocation" x="1051" y="1251"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZMM-oo-GLv">
