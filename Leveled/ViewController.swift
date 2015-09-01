@@ -67,21 +67,11 @@ class ViewController: UIViewController {
        
 
     }
+
     
-    
-    
+    // found repeate but this will not animate as I want.
+    //UIView.animateWithDuration(2.0, delay: 0.2, options: UIViewAnimationOptions.Repeat, animations: {
  
-    
-
-
-    
- 
-    
-   
-    
-
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
       
