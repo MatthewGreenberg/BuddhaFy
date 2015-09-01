@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     var userInfo : NSString = ""
     
     
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var usernameField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
@@ -26,6 +28,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        signInButton.layer.cornerRadius = 5
+        signUpButton.layer.cornerRadius = 5
     
 
     }
