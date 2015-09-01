@@ -8,4 +8,12 @@
 
 import Foundation
 
+var user : Int
+
+
+
+
+
+
+
 
