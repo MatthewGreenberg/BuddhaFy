@@ -96,8 +96,7 @@
                                 <rect key="frame" x="16" y="28" width="82" height="30"/>
                                 <state key="normal" title="Create User"/>
                                 <connections>
-                                    <action selector="getRequest" destination="r3l-mh-qL3" eventType="touchUpInside" id="oE4-3M-cxI"/>
-                                    <action selector="signUpUserBttn" destination="r3l-mh-qL3" eventType="touchUpInside" id="WZg-T1-UlF"/>
+                                    <action selector="signUpBttn" destination="r3l-mh-qL3" eventType="touchUpInside" id="VJi-af-UgN"/>
                                     <segue destination="BYZ-38-t0r" kind="modal" id="L13-6a-GSk"/>
                                 </connections>
                             </button>

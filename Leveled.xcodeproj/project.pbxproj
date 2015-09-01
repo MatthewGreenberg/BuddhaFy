@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4918D7561B9490E1002C56B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4918D7551B9490E1002C56B3 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4918D7581B9521DF002C56B3 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4918D7571B9521DF002C56B3 /* userData.swift */; settings = {ASSET_TAGS = (); }; };
 		6B155AF11B92A6730031151E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B155AF01B92A6730031151E /* AVFoundation.framework */; };
 		6B155AF31B92A8F60031151E /* buddha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B155AF21B92A8F60031151E /* buddha.mp3 */; settings = {ASSET_TAGS = (); }; };
 		6B9C25FD1B925D1F00C07485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C25FC1B925D1F00C07485 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		4918D7551B9490E1002C56B3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4918D7571B9521DF002C56B3 /* userData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
 		6B155AF01B92A6730031151E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6B155AF21B92A8F60031151E /* buddha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buddha.mp3; sourceTree = "<group>"; };
 		6B9C25F91B925D1F00C07485 /* Leveled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leveled.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 				6B9C26051B925D1F00C07485 /* LaunchScreen.storyboard */,
 				6B9C26081B925D1F00C07485 /* Info.plist */,
 				6B9C262C1B92622300C07485 /* TimerViewController.swift */,
+				4918D7571B9521DF002C56B3 /* userData.swift */,
 			);
 			path = Leveled;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				4918D7561B9490E1002C56B3 /* LoginViewController.swift in Sources */,
 				6B9C262D1B92622300C07485 /* TimerViewController.swift in Sources */,
 				6B9C25FF1B925D1F00C07485 /* ViewController.swift in Sources */,
+				4918D7581B9521DF002C56B3 /* userData.swift in Sources */,
 				6B9C25FD1B925D1F00C07485 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

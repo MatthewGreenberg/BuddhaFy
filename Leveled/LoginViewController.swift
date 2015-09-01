@@ -30,15 +30,12 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func getRequest() {
-        getUserData()
-        print(userInfo)
-    }
+
     
-    @IBAction func signUpUserBttn() {
+    @IBAction func signUpBttn() {
         signUpUser()
-        
     }
+  
     
     func signUpUser() {
         let urlPath : String = "http://localhost:3000/users.json/"
