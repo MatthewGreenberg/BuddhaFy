@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
-        pulseAnimation.duration = 1.5
+        pulseAnimation.duration = 1.0
         pulseAnimation.fromValue = 0.2
         pulseAnimation.toValue = 0.5
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -73,13 +73,18 @@ class ViewController: UIViewController {
 
 
     
-
+ 
+    
+   
     
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        
+        
         
         buddah.center = CGPointMake(160, 330)
         MeditateLabel.alpha = 0
