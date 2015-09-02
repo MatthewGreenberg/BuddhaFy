@@ -78,11 +78,7 @@ class StatsViewController: UIViewController {
             print("hello from inside")
             print(dataResponse)
             
-            let xp = NSUserDefaults().valueForKey("usepoints")
-            ?some int
-            
-            NSUserDefaults().setValue(xp +some int, forKey: "user_points")
-            
+                      
         })
         
     
