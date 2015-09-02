@@ -238,6 +238,15 @@ class TimerViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMeditationStats" {
             let statsViewController = segue.destinationViewController as! StatsViewController
+
+            
+            statsViewController.segueIntededTime = timerDuration
+            
+            statsViewController.segueCompletedTime = timeCount
+            
+            
+            
+            
             
              statsViewController.segueStatsLabel = timeString( timerDuration - timeCount)
             let myIntValue = Int((timerDuration - timeCount) / 60)
@@ -249,7 +258,7 @@ class TimerViewController: UIViewController {
             statsViewController.segueXPLabel = "\(myIntValue) XP point!"
             }
             else {
-                statsViewController.segueXPLabel = "\(myIntValue) XP point!"
+                statsViewController.segueXPLabel = "\(myIntValue) XP points!"
 
             
             }
