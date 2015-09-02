@@ -769,13 +769,10 @@
         <image name="buddah" width="283" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="okx-r5-1C2"/>
-=======
 
         <segue reference="MUb-c2-tiF"/>
 
->>>>>>> 9bf03b7f69e66f18e03773cc5ed62dc672d6cfd0
         <segue reference="XUr-tm-Xso"/>
         <segue reference="806-C8-wEx"/>
     </inferredMetricsTieBreakers>
