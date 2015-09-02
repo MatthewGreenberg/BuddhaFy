@@ -24,13 +24,12 @@ import Foundation
 
 class UserStatsViewController: UIViewController {
     
-    
-    
+    @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     
-    
-    
+    @IBOutlet weak var xpLabel: UILabel!
     var userInfo : NSString = ""
+    var userNameText : NSString = ""
     
     
     
@@ -40,6 +39,7 @@ class UserStatsViewController: UIViewController {
         
         getUserData()
         
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -94,18 +94,33 @@ class UserStatsViewController: UIViewController {
             let userLevelRaw = self.sanitizeLevel(newData[1])
 
             let userXpRaw = self.sanitizeXP(newData[2])
+
  
             print(userName)
-            
-            print(userLevelRaw)
-            
-            print(userXpRaw)
+ 
             
             
+            self.userNameText = userName
+            
+
+            
+            dispatch_async(dispatch_get_main_queue()) {
+               
+                self.usernameLabel.text = " Welcome \(userName)"
+                self.levelLabel.text = "You are only level \(userLevelRaw)"
+                self.xpLabel.text = "You have only \(userXpRaw) XP"
+            
+            
+            }
+            
+
             
         })
         
     }
+    
+    
+
     
     
     
@@ -120,8 +135,8 @@ class UserStatsViewController: UIViewController {
     func sanitizeLevel(level : String) -> Int {
         
         return Int(level)!
-        
     }
+
     func sanitizeXP(xPPoints : String) -> Int {
         
         let xPPointsString = xPPoints as NSString
