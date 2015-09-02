@@ -94,6 +94,7 @@
                         <outlet property="Arrow" destination="B1W-pv-ebQ" id="p7f-3Z-Hwu"/>
                         <outlet property="MeditateLabel" destination="0dN-gw-W1g" id="p1g-0z-oGd"/>
                         <outlet property="buddah" destination="9qy-yL-CcT" id="GGn-8c-ebj"/>
+                        <outlet property="signUpButton" destination="9sM-u8-Im7" id="SY9-05-uri"/>
                         <outlet property="welcomeToBuddhafy" destination="Da6-VI-NLS" id="NNd-p6-e3S"/>
                     </connections>
                 </viewController>
@@ -463,8 +464,8 @@
                                 <rect key="frame" x="68" y="46" width="185" height="98"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbH-1G-bFv">
-                                <rect key="frame" x="137" y="417" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="143" y="417" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="okx-r5-1C2"/>
                                 </connections>
@@ -640,6 +641,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XUr-tm-Xso"/>
-        <segue reference="8FE-Zu-XzT"/>
+        <segue reference="okx-r5-1C2"/>
     </inferredMetricsTieBreakers>
 </document>

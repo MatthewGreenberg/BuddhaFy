@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Arrow: UIImageView!
     @IBOutlet weak var buddah: UIImageView!
     
+    @IBOutlet weak var signUpButton: UIButton!
     
     let userKey = "userId"
     
@@ -98,10 +99,10 @@ class ViewController: UIViewController {
             animations: {
                 self.welcomeToBuddhafy.alpha = 0
             }, completion: nil)
-        
+         //segue to the main page
         if let value =  NSUserDefaults.standardUserDefaults().valueForKey(userKey) {
             
-           //segue to the main page
+          signUpButton.alpha = 0
             
             
             
