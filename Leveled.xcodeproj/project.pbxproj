@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49DC7F6E1B96464E006079C8 /* UserStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC7F6D1B96464E006079C8 /* UserStatsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6B155AF11B92A6730031151E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B155AF01B92A6730031151E /* AVFoundation.framework */; };
 		6B155AF31B92A8F60031151E /* buddha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B155AF21B92A8F60031151E /* buddha.mp3 */; settings = {ASSET_TAGS = (); }; };
 		6B155AF71B93C0FF0031151E /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B155AF61B93C0FF0031151E /* StatsViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49DC7F6D1B96464E006079C8 /* UserStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatsViewController.swift; sourceTree = "<group>"; };
+		49DC7F711B96992F006079C8 /* AndrewsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AndrewsPlayground.playground; sourceTree = "<group>"; };
 		6B155AF01B92A6730031151E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6B155AF21B92A8F60031151E /* buddha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buddha.mp3; sourceTree = "<group>"; };
 		6B155AF61B93C0FF0031151E /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				F2D807871B94A2F700720B90 /* TimePickerViewController.swift */,
 				6B155B041B950CCB0031151E /* GameInfoViewController.swift */,
 				6B155B081B95E2620031151E /* LoginViewController.swift */,
+				49DC7F6D1B96464E006079C8 /* UserStatsViewController.swift */,
+				49DC7F711B96992F006079C8 /* AndrewsPlayground.playground */,
 			);
 			path = Leveled;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			files = (
 				6B9C262D1B92622300C07485 /* TimerViewController.swift in Sources */,
 				F2D807881B94A2F700720B90 /* TimePickerViewController.swift in Sources */,
+				49DC7F6E1B96464E006079C8 /* UserStatsViewController.swift in Sources */,
 				6B9C25FF1B925D1F00C07485 /* ViewController.swift in Sources */,
 				6B9C25FD1B925D1F00C07485 /* AppDelegate.swift in Sources */,
 				6B155B091B95E2620031151E /* LoginViewController.swift in Sources */,
