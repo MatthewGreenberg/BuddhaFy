@@ -335,13 +335,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Leveled/LoginViewController.swift"
-            timestampString = "462895943.473479"
+            timestampString = "462906641.645531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "didReceiveMemoryWarning()"
-            landmarkType = "5">
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -383,13 +383,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Leveled/UserStatsViewController.swift"
-            timestampString = "462903438.06492"
+            timestampString = "462910492.461256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "UserStatsViewController"
-            landmarkType = "3">
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "sanitizeXP(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

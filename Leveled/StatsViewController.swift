@@ -17,6 +17,7 @@ class StatsViewController: UIViewController {
     var segueXPLabel : String = ""
     var segueIntededTime : Double = 0.00
     var segueCompletedTime : Double = 0.00
+//    var xpPoints: Int = 0
     
     
     
@@ -76,6 +77,12 @@ class StatsViewController: UIViewController {
             let dataResponse : NSString = NSString(data: data!, encoding: NSUTF8StringEncoding)!
             print("hello from inside")
             print(dataResponse)
+            
+            let xp = NSUserDefaults().valueForKey("usepoints")
+            ?some int
+            
+            NSUserDefaults().setValue(xp +some int, forKey: "user_points")
+            
         })
         
     
