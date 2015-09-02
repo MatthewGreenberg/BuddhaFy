@@ -769,15 +769,7 @@
         <image name="buddah" width="283" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-
-
-        <segue reference="806-C8-wEx"/>
-
-
-        <segue reference="806-C8-wEx"/>
-
-        <segue reference="okx-r5-1C2"/>
-
         <segue reference="XUr-tm-Xso"/>
+        <segue reference="8FE-Zu-XzT"/>
     </inferredMetricsTieBreakers>
 </document>
