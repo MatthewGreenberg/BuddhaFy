@@ -27,13 +27,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Icon-60@2x-1.png",
+      "filename" : "buddha_touch120.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Icon-60@3x-1.png",
+      "filename" : "buddha_touchup180.png",
       "scale" : "3x"
     }
   ],
