@@ -61,7 +61,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        self.dropFromTop(buddah, animationTime: 0.5)
+        self.dropFromTop(buddah, animationTime: 0.7)
         
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
         pulseAnimation.duration = 1.0
