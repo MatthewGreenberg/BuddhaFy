@@ -12,9 +12,6 @@ let kUserIDKey = "user_id"
 
 class LoginViewController: UIViewController {
     
-    
-    
-    
 
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var usernameField: UITextField!

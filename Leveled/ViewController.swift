@@ -34,7 +34,6 @@ class ViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         _ = touches.first as UITouch!
         
-
         
     }
     
@@ -63,6 +62,8 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
+        self.dropFromTop(buddah, animationTime: 0.7)
+        
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
         pulseAnimation.duration = 1.0
         pulseAnimation.fromValue = 0.2
@@ -81,7 +82,7 @@ class ViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         
         //Animation
         buddah.center = CGPointMake(160, 330)
@@ -106,15 +107,11 @@ class ViewController: UIViewController {
           signUpButton.alpha = 0
             
             
-            
-            
         }
             
         else {
             
             //segue to the login page
-            
-            
             
         }
         
@@ -123,17 +120,22 @@ class ViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().setValue("Some Value!", forKey: userKey)
         
             performSegueWithIdentifier("segueToSignIn", sender: nil)
-        
-
-      
-        
-
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func dropFromTop(view: UIView, animationTime: Float) {
+        let animation:CATransition = CATransition()
+        animation.duration = CFTimeInterval(animationTime)
+        animation.type = "moveIn"
+        animation.timingFunction = CAMediaTimingFunction(name:"easeInEaseOut")
+        animation.subtype = "fromBottom"
+        animation.fillMode = "forwards"
+        view.layer.addAnimation(animation, forKey: nil)
     }
     
     
