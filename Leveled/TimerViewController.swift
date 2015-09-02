@@ -244,12 +244,13 @@ class TimerViewController: UIViewController {
             
             if myIntValue == 0 {
              statsViewController.segueXPLabel = "No XP points :( "
+                
             }
             else if myIntValue == 1 {
             statsViewController.segueXPLabel = "\(myIntValue) XP point!"
             }
             else {
-                statsViewController.segueXPLabel = "\(myIntValue) XP point!"
+                statsViewController.segueXPLabel = "\(myIntValue) XP points!"
 
             
             }

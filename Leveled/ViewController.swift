@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var Arrow: UIImageView!
     @IBOutlet weak var buddah: UIImageView!
     
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    let userKey = "userId"
+    
+
+    
   
     @IBOutlet weak var welcomeToBuddhafy: UILabel!
    
@@ -65,19 +71,20 @@ class ViewController: UIViewController {
        
 
     }
+
     
-    
+    // found repeate but this will not animate as I want.
+    //UIView.animateWithDuration(2.0, delay: 0.2, options: UIViewAnimationOptions.Repeat, animations: {
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        
         self.viewMoveInFromTop(buddah, animationTime: 1.0)
+
+        //Animation
+
         buddah.center = CGPointMake(160, 330)
         MeditateLabel.alpha = 0
-        
-       
-      
-        
         UIView.animateWithDuration(1.0,
             delay: 1.8,
             options: UIViewAnimationOptions.CurveLinear,
@@ -92,6 +99,30 @@ class ViewController: UIViewController {
             animations: {
                 self.welcomeToBuddhafy.alpha = 0
             }, completion: nil)
+         //segue to the main page
+        if let value =  NSUserDefaults.standardUserDefaults().valueForKey(userKey) {
+            
+          signUpButton.alpha = 0
+            
+            
+            
+            
+        }
+            
+        else {
+            
+            //segue to the login page
+            
+            
+            
+        }
+        
+        
+        
+        NSUserDefaults.standardUserDefaults().setValue("Some Value!", forKey: userKey)
+        
+            performSegueWithIdentifier("segueToSignIn", sender: nil)
+        
 
 
     }
