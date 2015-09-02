@@ -39,12 +39,8 @@ class UserStatsViewController: UIViewController {
         
         getUserData()
         
-        
-        
-        
+
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         
@@ -53,12 +49,6 @@ class UserStatsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
         
     }
-    
-    
-    
-    
-    
-    
     
     func getUserData() {
         
@@ -98,28 +88,21 @@ class UserStatsViewController: UIViewController {
             
             let newData = NSString(data: data!, encoding: NSUTF8StringEncoding)!.componentsSeparatedByString(",")
             
-            
-            
+
             let userName = self.sanitizeName((newData[0]))
-            
+
             let userLevelRaw = self.sanitizeLevel(newData[1])
-            
+
             let userXpRaw = self.sanitizeXP(newData[2])
-            
+
+ 
+            print(userName)
+ 
             
             
             self.userNameText = userName
             
-            
-            
-            
-//            print(self.userNameText)
-//
-//            print(userName)
-//            
-//            print(userLevelRaw)
-//            
-//            print(userXpRaw)
+
             
             dispatch_async(dispatch_get_main_queue()) {
                
@@ -130,10 +113,7 @@ class UserStatsViewController: UIViewController {
             
             }
             
-            
-            
-            
-            
+
             
         })
         
@@ -152,12 +132,11 @@ class UserStatsViewController: UIViewController {
         
     }
     
-    
     func sanitizeLevel(level : String) -> Int {
         
         return Int(level)!
     }
-    
+
     func sanitizeXP(xPPoints : String) -> Int {
         
         let xPPointsString = xPPoints as NSString
