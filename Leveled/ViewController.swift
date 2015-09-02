@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var Arrow: UIImageView!
     @IBOutlet weak var buddah: UIImageView!
-    
     @IBOutlet weak var signUpButton: UIButton!
     
     let userKey = "userId"
@@ -62,7 +61,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        self.dropFromTop(buddah, animationTime: 0.7)
+        self.flipFromLeft(buddah, animationTime: 1.0)
         
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
         pulseAnimation.duration = 1.0
@@ -136,6 +135,14 @@ class ViewController: UIViewController {
         animation.subtype = "fromBottom"
         animation.fillMode = "forwards"
         view.layer.addAnimation(animation, forKey: nil)
+    }
+    
+    func flipFromLeft(view: UIView, animationTime: Float) {
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationCurve(UIViewAnimationCurve.EaseInOut)
+        UIView.setAnimationDuration(NSTimeInterval(animationTime))
+        UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: view, cache: false)
+        UIView.commitAnimations()
     }
     
     
