@@ -73,12 +73,21 @@
                                     <segue destination="ibO-eJ-Ajr" kind="modal" identifier="segueToSignIn" id="EZJ-PO-jew"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCB-g6-Gc7">
+                                <rect key="frame" x="33" y="507" width="40" height="30"/>
+                                <state key="normal" title="Stats!"/>
+                                <connections>
+                                    <segue destination="iRX-Y0-Clc" kind="modal" id="gez-K0-hab"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="B1W-pv-ebQ" firstAttribute="top" secondItem="Da6-VI-NLS" secondAttribute="bottom" constant="26" id="0Ov-6m-7Up"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yCB-g6-Gc7" secondAttribute="bottom" constant="31" id="5Nv-Dx-GOh"/>
                             <constraint firstItem="0dN-gw-W1g" firstAttribute="centerX" secondItem="B1W-pv-ebQ" secondAttribute="centerX" id="Jp5-5g-zIU"/>
+                            <constraint firstItem="yCB-g6-Gc7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="K95-pa-0In"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0dN-gw-W1g" secondAttribute="trailing" constant="99" id="aw6-17-aD9"/>
                             <constraint firstItem="0dN-gw-W1g" firstAttribute="top" secondItem="Da6-VI-NLS" secondAttribute="bottom" constant="58" id="j6q-ZI-AUR"/>
                             <constraint firstItem="Da6-VI-NLS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="jpS-OF-dcS"/>
@@ -477,6 +486,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5K-tX-nDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="487" y="1347"/>
+        </scene>
+        <!--User Stats View Controller-->
+        <scene sceneID="udg-nd-aYO">
+            <objects>
+                <viewController id="iRX-Y0-Clc" customClass="UserStatsViewController" customModule="Leveled" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ssb-bt-zLL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wg0-mb-pkA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SEP-xx-A5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ta-50-0NV">
+                                <rect key="frame" x="102" y="84" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="usernameLabel" destination="0Ta-50-0NV" id="hfB-Bl-4zP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsW-Oj-1US" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="-375"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Lcg-p9-3bw">
