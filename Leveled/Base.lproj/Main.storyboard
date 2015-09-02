@@ -770,6 +770,10 @@
     </resources>
     <inferredMetricsTieBreakers>
 
+
+        <segue reference="806-C8-wEx"/>
+
+
         <segue reference="806-C8-wEx"/>
 
         <segue reference="okx-r5-1C2"/>
