@@ -731,7 +731,10 @@
         <image name="buddah" width="283" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
+
         <segue reference="MUb-c2-tiF"/>
+
         <segue reference="XUr-tm-Xso"/>
+        <segue reference="806-C8-wEx"/>
     </inferredMetricsTieBreakers>
 </document>
