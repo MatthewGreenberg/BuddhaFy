@@ -24,13 +24,12 @@ import Foundation
 
 class UserStatsViewController: UIViewController {
     
-    
-    
+    @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     
-    
-    
+    @IBOutlet weak var xpLabel: UILabel!
     var userInfo : NSString = ""
+    var userNameText : NSString = ""
     
     
     
@@ -39,6 +38,7 @@ class UserStatsViewController: UIViewController {
         super.viewDidLoad()
         
         getUserData()
+        
         
         
         
@@ -108,17 +108,39 @@ class UserStatsViewController: UIViewController {
             
             
             
-            print(userName)
+            self.userNameText = userName
             
-            print(userLevelRaw)
             
-            print(userXpRaw)
+            
+            
+//            print(self.userNameText)
+//
+//            print(userName)
+//            
+//            print(userLevelRaw)
+//            
+//            print(userXpRaw)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+               
+                self.usernameLabel.text = " Welcome \(userName)"
+                self.levelLabel.text = "You are only level \(userLevelRaw)"
+                self.xpLabel.text = "You have only \(userXpRaw) XP"
+            
+            
+            }
+            
+            
+            
             
             
             
         })
         
     }
+    
+    
+
     
     
     
@@ -131,14 +153,10 @@ class UserStatsViewController: UIViewController {
     }
     
     
-    
     func sanitizeLevel(level : String) -> Int {
         
         return Int(level)!
-        
     }
-    
-    
     
     func sanitizeXP(xPPoints : String) -> Int {
         
