@@ -57,8 +57,6 @@ class ViewController: UIViewController {
 
     
     }
-
-    
     
     override func viewDidAppear(animated: Bool) {
         
@@ -81,8 +79,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        
+        self.viewMoveInFromTop(buddah, animationTime: 1.0)
+
         //Animation
+
         buddah.center = CGPointMake(160, 330)
         MeditateLabel.alpha = 0
         UIView.animateWithDuration(1.0,
@@ -124,15 +124,24 @@ class ViewController: UIViewController {
             performSegueWithIdentifier("segueToSignIn", sender: nil)
         
 
-      
-        
-
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func viewMoveInFromTop(view:UIView, animationTime:Float) {
+        var animation:CATransition = CATransition()
+        animation.duration = CFTimeInterval(animationTime)
+        animation.type = "moveIn"
+        animation.timingFunction = CAMediaTimingFunction(name:"easeInEaseOut")
+        animation.subtype = "fromBottom"
+        animation.fillMode = "forwards"
+        view.layer.addAnimation(animation, forKey: nil)
+        
     }
     
     
