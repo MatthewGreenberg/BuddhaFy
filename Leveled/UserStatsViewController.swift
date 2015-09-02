@@ -101,10 +101,12 @@ class UserStatsViewController: UIViewController {
             
             
             let userName = self.sanitizeName((newData[0]))
-            
+
             let userLevelRaw = self.sanitizeLevel(newData[1])
-            
+
             let userXpRaw = self.sanitizeXP(newData[2])
+            
+
             
             
             
@@ -129,17 +131,17 @@ class UserStatsViewController: UIViewController {
         return string.substringWithRange(NSRange(location: 2, length: string.length-3))
         
     }
-    
-    
-    
+//
+//    
+//    
     func sanitizeLevel(level : String) -> Int {
         
         return Int(level)!
         
     }
-    
-    
-    
+//
+//    
+//    
     func sanitizeXP(xPPoints : String) -> Int {
         
         let xPPointsString = xPPoints as NSString
