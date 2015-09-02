@@ -12,7 +12,7 @@ let kUserIDKey = "user_id"
 
 class LoginViewController: UIViewController {
     
-    var userInfo : NSString = ""
+    
     
     
 
@@ -78,27 +78,5 @@ class LoginViewController: UIViewController {
             var user_id = stringArray[stringArray.count-2]
             NSUserDefaults.standardUserDefaults().setValue(user_id, forKey: kUserIDKey)
         })
-    }
-    
-    func getUserData() {
-        
-        var userData : NSString = ""
-        
-        let urlPath : String = "http://localhost:3000/users/1.json"
-        
-        let url: NSURL = NSURL(string: urlPath)!
-        
-        let request : NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        
-        request.HTTPMethod = "GET"
-
-        let queue:NSOperationQueue = NSOperationQueue()
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
-            
-            self.userInfo = (NSString(data: data!, encoding: NSUTF8StringEncoding))!
-            
-        })
-        
     }
 }
