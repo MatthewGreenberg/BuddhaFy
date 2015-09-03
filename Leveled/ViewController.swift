@@ -27,14 +27,10 @@ class ViewController: UIViewController {
     let userXP: Int = 0
     var userPoints = 0
     
-
-    
- 
     
     
 
-    
-
+  
     
   
     @IBOutlet weak var welcomeToBuddhafy: UILabel!
@@ -65,6 +61,8 @@ class ViewController: UIViewController {
         UIView.animateWithDuration(1.0, animations: {
             self.avatar.transform = CGAffineTransformMakeRotation((0.0 * CGFloat(M_PI)) / 180.0)
         })
+        
+        
 
     
     }
@@ -73,31 +71,9 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool){
         
+     self.flipFromLeft(avatar, animationTime: 1.0)
         
         
-
-        print(userPoints)
-        if userPoints == 1 {
-            
-            panda.hidden = false
-            avatar = panda
-            
-            
-            buddah.hidden = true
-            
-            print("Hello From 1")
-        }
-        else if userPoints > 1 {
-            
-            avatar = buddah
-            panda.hidden = true
-            buddah.hidden = false
-            print("ELSE")
-            
-        }
-
-        
-        self.flipFromLeft(avatar, animationTime: 1.0)
         
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
         pulseAnimation.duration = 1.0
@@ -123,8 +99,11 @@ class ViewController: UIViewController {
             animations: {
                 self.welcomeToBuddhafy.alpha = 0
             }, completion: nil)
-
-
+        
+//        getUserData()
+        changeAvatar()
+    
+        
     }
 
     
@@ -133,16 +112,10 @@ class ViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-     
 
+        if NSUserDefaults().valueForKey("userPoints") == nil {
         
-        
-        
-        
-        if NSUserDefaults().valueForKey("userPoints") != nil {
-        
-         userPoints = NSUserDefaults().valueForKey("userPoints") as! Int
+         NSUserDefaults().setValue(1, forKey: "userPoints")
         }
      
             buddah.hidden = true 
@@ -154,27 +127,19 @@ class ViewController: UIViewController {
                 //segue to the main page
         if let value =  NSUserDefaults.standardUserDefaults().valueForKey(userKey) {
             
-          signUpButton.alpha = 0
+            signUpButton.alpha = 0
 //            getUserData()
            
-        }
-                
-        else {
-            
-           
-
-            
-            
-        }
+            }
         //segue to the login page
         NSUserDefaults.standardUserDefaults().setValue("Some Value!", forKey: userKey)
         
         performSegueWithIdentifier("segueToSignIn", sender: nil)
         
+        getUserData()
+
         }
         
-        
-  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -202,7 +167,7 @@ class ViewController: UIViewController {
     func getUserData() {
         
         
-//        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "user_id")
+        //        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "user_id")
         
         let current_user_id = NSUserDefaults.standardUserDefaults().valueForKey("user_id")!
         
@@ -245,6 +210,8 @@ class ViewController: UIViewController {
             
         })
     }
+
+    
     
     func sanitizeName(name: String) -> String {
         
@@ -269,6 +236,33 @@ class ViewController: UIViewController {
         
         
     }
+    
+    
+    func changeAvatar() {
+        print(userPoints)
+        if userPoints <= 1 {
+            
+            panda.hidden = false
+            avatar = panda
+            
+            
+            buddah.hidden = true
+            
+            print("Hello From 1")
+            print(NSUserDefaults().valueForKey("userPoints")!)
+            
+        }
+        else{
+            
+            avatar = buddah
+            panda.hidden = true
+            buddah.hidden = false
+            print("ELSE")
+            
+        }
+        
+    }
+
     
     
 }

@@ -146,7 +146,7 @@ class UserStatsViewController: UIViewController {
     
     func sanitizeLevel(level : String) -> Int {
         
-        return Int(5)
+        return Int(level)!
     }
 
     func sanitizeXP(xPPoints : String) -> String {
@@ -156,6 +156,7 @@ class UserStatsViewController: UIViewController {
         let subset = xPPointsString.substringWithRange(NSRange(location: 0, length: xPPointsString.length-1))
         
         return subset
+        
         
         
     }
