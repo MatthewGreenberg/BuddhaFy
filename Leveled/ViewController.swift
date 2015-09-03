@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     let userKey = "userId"
+    let userXP: Int = 0
     
 
     
@@ -103,6 +104,22 @@ class ViewController: UIViewController {
         if let value =  NSUserDefaults.standardUserDefaults().valueForKey(userKey) {
             
           signUpButton.alpha = 0
+            
+            print(NSUserDefaults().valueForKey("userPoints")!)
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
         }

@@ -249,7 +249,23 @@ class TimerViewController: UIViewController {
             
             
              statsViewController.segueStatsLabel = timeString( timerDuration - timeCount)
-            let myIntValue = Int((timerDuration - timeCount) / 60)
+            var myIntValue = Int((timerDuration - timeCount) / 60)
+//            
+            if timeCount == 0 {
+                    myIntValue +=  10
+            }
+            
+            
+            
+            let preGamePoints = NSUserDefaults().valueForKey("userPoints")
+            
+            myIntValue += preGamePoints as! Int
+            
+            myIntValue = myIntValue / 2 
+            
+           
+            NSUserDefaults().setValue(myIntValue, forKey: "userPoints")
+            
             
             if myIntValue == 0 {
              statsViewController.segueXPLabel = "No XP points :( "
@@ -259,6 +275,7 @@ class TimerViewController: UIViewController {
             statsViewController.segueXPLabel = "\(myIntValue) XP point!"
             }
             else {
+                
                 statsViewController.segueXPLabel = "\(myIntValue) XP points!"
 
             
