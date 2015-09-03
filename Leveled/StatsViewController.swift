@@ -51,7 +51,7 @@ class StatsViewController: UIViewController {
         
         let user_id = NSUserDefaults().valueForKey("user_id")! as! String
         
-        let urlPath : String = "http://localhost:3000/users/"+user_id+"/rounds.json"
+        let urlPath : String = "https://immense-escarpment-4758.herokuapp.com/users/"+user_id+"/rounds.json"
         
         let url : NSURL = NSURL(string: urlPath)!
         

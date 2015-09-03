@@ -39,12 +39,23 @@ class UserStatsViewController: UIViewController {
         
         getUserData()
         
+        
+        
 
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+    }
+
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         
         super.didReceiveMemoryWarning()
+
         
         // Dispose of any resources that can be recreated.
         
@@ -58,7 +69,7 @@ class UserStatsViewController: UIViewController {
         
         
         
-        let urlPath : String = "http://localhost:3000/users/\(current_user_id).json"
+        let urlPath : String = "https://immense-escarpment-4758.herokuapp.com/users/\(current_user_id).json"
         
         
         
@@ -97,6 +108,7 @@ class UserStatsViewController: UIViewController {
 
  
             print(userName)
+            print(userXpRaw)
  
             
             
@@ -134,16 +146,17 @@ class UserStatsViewController: UIViewController {
     
     func sanitizeLevel(level : String) -> Int {
         
-        return Int(level)!
+        return Int(5)
     }
 
-    func sanitizeXP(xPPoints : String) -> Int {
+    func sanitizeXP(xPPoints : String) -> String {
         
         let xPPointsString = xPPoints as NSString
         
         let subset = xPPointsString.substringWithRange(NSRange(location: 0, length: xPPointsString.length-1))
         
-        return sanitizeLevel(subset)
+        return subset
+        
         
     }
     

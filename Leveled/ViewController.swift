@@ -105,7 +105,6 @@ class ViewController: UIViewController {
             
           signUpButton.alpha = 0
             
-            print(NSUserDefaults().valueForKey("userPoints")!)
             
             
             

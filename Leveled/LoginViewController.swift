@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
     
     func signUpUser() {
         
-        let urlPath : String = "http://localhost:3000/users.json/"
+        let urlPath : String = "https://immense-escarpment-4758.herokuapp.com/users.json/"
         
         let url : NSURL = NSURL(string: urlPath)!
         
