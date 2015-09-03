@@ -4,11 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4EC9242325463947345742C074D276FC6778FE31" : 0,
     "CA28E0F160605700078C831D59D90851713AC7C2" : 0,
     "53EAD8ABBBF5D316D68423327F70284D0E29C9CA" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D4D51368-0664-4A08-A1FD-F7B66A2A3715",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4EC9242325463947345742C074D276FC6778FE31" : "leveled\/json-swift\/",
     "CA28E0F160605700078C831D59D90851713AC7C2" : "..\/leveled-beta",
     "53EAD8ABBBF5D316D68423327F70284D0E29C9CA" : "Leveled\/"
   },
@@ -16,6 +18,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Leveled.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/owensd\/json-swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4EC9242325463947345742C074D276FC6778FE31"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MatthewGreenberg\/leveled.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
