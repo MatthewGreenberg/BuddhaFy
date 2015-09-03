@@ -21,7 +21,7 @@ class ViewController: UIViewController {
    
     
      var avatar : UIImageView!
-    let arrayOfImages = [8, 3]
+   
     
     let userKey = "userId"
     let userXP: Int = 0
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
  
     
     
-//    avatar = arrayofImages[0]
+
     
 
     
@@ -75,8 +75,7 @@ class ViewController: UIViewController {
         
         
         
-        getUserData()
-        
+
         print(userPoints)
         if userPoints == 1 {
             
@@ -110,36 +109,6 @@ class ViewController: UIViewController {
         self.Arrow.layer.addAnimation(pulseAnimation, forKey: nil)
         
         
-        
-
-    }
-
-    
-    // found repeate but this will not animate as I want.
-    //UIView.animateWithDuration(2.0, delay: 0.2, options: UIViewAnimationOptions.Repeat, animations: {
- 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        getUserData()
-        
-         userPoints = NSUserDefaults().valueForKey("userPoints") as! Int
-     
-            buddah.hidden = true 
-            avatar = panda
-
-        
-            
-     
-      
-       
-        
-       
-        
-        
-        //Animation
-        avatar.center = CGPointMake(160, 330)
-        MeditateLabel.alpha = 0
         UIView.animateWithDuration(1.0,
             delay: 1.8,
             options: UIViewAnimationOptions.CurveLinear,
@@ -154,26 +123,58 @@ class ViewController: UIViewController {
             animations: {
                 self.welcomeToBuddhafy.alpha = 0
             }, completion: nil)
-         //segue to the main page
+
+
+    }
+
+    
+    // found repeate but this will not animate as I want.
+    //UIView.animateWithDuration(2.0, delay: 0.2, options: UIViewAnimationOptions.Repeat, animations: {
+ 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+     
+
+        
+        
+        
+        
+        if NSUserDefaults().valueForKey("userPoints") != nil {
+        
+         userPoints = NSUserDefaults().valueForKey("userPoints") as! Int
+        }
+     
+            buddah.hidden = true 
+            avatar = panda
+
+        //Animation
+        avatar.center = CGPointMake(160, 330)
+        MeditateLabel.alpha = 0
+                //segue to the main page
         if let value =  NSUserDefaults.standardUserDefaults().valueForKey(userKey) {
             
           signUpButton.alpha = 0
-            
+//            getUserData()
+           
         }
-            
+                
         else {
             
-            //segue to the login page
+           
+
             
+            
+        }
+        //segue to the login page
+        NSUserDefaults.standardUserDefaults().setValue("Some Value!", forKey: userKey)
+        
+        performSegueWithIdentifier("segueToSignIn", sender: nil)
+        
         }
         
         
-        
-        NSUserDefaults.standardUserDefaults().setValue("Some Value!", forKey: userKey)
-        
-            performSegueWithIdentifier("segueToSignIn", sender: nil)
-
-    }
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -201,6 +202,7 @@ class ViewController: UIViewController {
     func getUserData() {
         
         
+//        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "user_id")
         
         let current_user_id = NSUserDefaults.standardUserDefaults().valueForKey("user_id")!
         
@@ -235,6 +237,8 @@ class ViewController: UIViewController {
             print("data as string?")
             
             let newData = NSString(data: data!, encoding: NSUTF8StringEncoding)!.componentsSeparatedByString(",")
+            
+            print(newData)
             
             self.userPoints = self.sanitizeXP(newData[2])
             
