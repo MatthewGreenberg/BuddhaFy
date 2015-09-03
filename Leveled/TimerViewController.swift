@@ -265,6 +265,7 @@ class TimerViewController: UIViewController {
             
            
             NSUserDefaults().setValue(myIntValue, forKey: "userPoints")
+//            print(NSUserDefaults().valueForKey("userPoints"))
             
             
             if myIntValue == 0 {
