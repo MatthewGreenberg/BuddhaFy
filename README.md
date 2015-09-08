@@ -1,0 +1,1 @@
+BuddhaFy is our capstone group project at Dev Bootcamp. It is a native IOS application built in Swift with a Rails backend.  BuddhaFy uses gamification to incentivize meditation through obtaining XP points and leveling up an avatar.  
