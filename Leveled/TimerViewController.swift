@@ -238,18 +238,46 @@ class TimerViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMeditationStats" {
             let statsViewController = segue.destinationViewController as! StatsViewController
+
+            
+            statsViewController.segueIntededTime = timerDuration
+            
+            statsViewController.segueCompletedTime = timeCount
+            
+            
+            
+            
             
              statsViewController.segueStatsLabel = timeString( timerDuration - timeCount)
-            let myIntValue = Int((timerDuration - timeCount) / 60)
+            var myIntValue = Int((timerDuration - timeCount) / 60)
+//            
+            if timeCount == 0 {
+                    myIntValue +=  10
+            }
+            
+            
+            
+            let preGamePoints = NSUserDefaults().valueForKey("userPoints")
+            
+            myIntValue += preGamePoints as! Int
+            
+            myIntValue = myIntValue / 2 
+            
+           
+            NSUserDefaults().setValue(myIntValue, forKey: "userPoints")
+//            print(NSUserDefaults().valueForKey("userPoints"))
+            
             
             if myIntValue == 0 {
              statsViewController.segueXPLabel = "No XP points :( "
+                
             }
             else if myIntValue == 1 {
             statsViewController.segueXPLabel = "\(myIntValue) XP point!"
             }
             else {
-                statsViewController.segueXPLabel = "\(myIntValue) XP point!"
+                
+                statsViewController.segueXPLabel = "\(myIntValue) XP points!"
 
             
             }
